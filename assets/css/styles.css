@@ -269,6 +269,7 @@ input {
 .products {
 	position: relative;
 	top: 100px;
+	left: -10px;
 }
 
 .tab__items {
@@ -504,7 +505,7 @@ input {
 .footer__hooks {
 	position: absolute;
 	top: -40%;
-	transform: translate(35%, -100%);
+	transform: translate(37.5%, -100%);
 }
 
 .footer__hooks a {

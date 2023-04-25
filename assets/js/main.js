@@ -14,7 +14,7 @@ var swiperCategories = new Swiper(".tab__item", {
 		},
 		320: {
 			slidesPerView: 1,
-			spaceBetween: 20,
+			spaceBetween: 10,
 		},
 		720: {
 			slidesPerView: 2,
