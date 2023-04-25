@@ -268,7 +268,7 @@ input {
 
 .products {
 	position: relative;
-	top: 85px;
+	top: 100px;
 }
 
 .tab__items {
@@ -289,6 +289,10 @@ input {
 	background: #fff;
 	border-radius: 0.5rem;
 	padding: 0.2rem 1rem;
+}
+
+.product__item:hover .product__price {
+	top: 335px;
 }
 
 .product__banner,
@@ -327,6 +331,8 @@ input {
 }
 
 .product__price {
+	position: absolute;
+	top: 361px;
 	font-size: var(--h4-font-size);
 }
 
@@ -342,9 +348,12 @@ input {
 }
 
 .full {
+	position: absolute;
+	top: 361px;
 	display: flex;
 	flex-direction: row;
-	margin-top: 5px;
+	margin-top: 3px;
+	margin-left: 90px;
 }
 
 .full i,
@@ -664,10 +673,6 @@ input {
 	}
 	/*=============== PRODUCTS ===============*/
 
-	.products {
-		top: 85px;
-	}
-
 	.full span {
 		display: flex;
 	}
@@ -675,7 +680,7 @@ input {
 	.swiper-arrows {
 		display: block;
 		position: relative;
-		bottom: 150px;
+		bottom: 200px;
 	}
 
 	.swiper-button-next,
@@ -758,17 +763,12 @@ input {
 	/*=============== PRODUCTS ===============*/
 
 	.products {
-		top: 150px;
+		top: 160px;
 	}
 
-	.full {
-		position: relative;
-		top: -2px;
-		font-size: 1.2rem;
-	}
 	/*=============== BENEFITS ===============*/
 	.benefit {
-		top: -195px;
+		top: -205px;
 	}
 
 	.benefits__ul {
