@@ -285,8 +285,10 @@ input {
 }
 
 .product__item {
+	position: relative;
+	top: 5px;
 	border-radius: 2px;
-	box-shadow: 0 0 10px 0.5px #ddd;
+	box-shadow: 0 0px 1px 0.5px #000;
 	background: #fff;
 	border-radius: 0.5rem;
 	padding: 0.2rem 1rem;
@@ -340,6 +342,7 @@ input {
 .product__content {
 	display: flex;
 	flex-direction: row;
+	margin-left: 2%;
 }
 
 .product__content span {
@@ -432,7 +435,7 @@ input {
 
 .benefit {
 	position: relative;
-	margin-top: 50px;
+	margin-top: 60px;
 	top: -290px;
 	z-index: 200;
 }
@@ -756,6 +759,10 @@ input {
 
 	.products {
 		top: 160px;
+	}
+
+	.product__actions {
+		left: 95%;
 	}
 
 	/*=============== BENEFITS ===============*/
