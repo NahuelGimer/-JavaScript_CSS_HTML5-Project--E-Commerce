@@ -142,11 +142,13 @@ input {
 .nav__item:nth-child(2n) {
 	display: none;
 }
+
 .nav__img,
 .nav__img1,
 .nav__img2 {
 	display: none;
 }
+
 /*=============== HOME ===============*/
 
 .home {
@@ -268,8 +270,9 @@ input {
 
 .products {
 	position: relative;
-	top: 100px;
-	left: -10px;
+	margin: 0 auto;
+	top: 80px;
+	width: 100vw;
 }
 
 .tab__items {
@@ -279,6 +282,7 @@ input {
 .tab__item {
 	height: 100%;
 	min-height: 700px;
+	width: 90vw;
 }
 .products__container {
 	position: relative;
@@ -286,11 +290,17 @@ input {
 
 .product__item {
 	position: relative;
+	left: -50px;
+	display: flex;
+	align-items: center;
+	justify-self: center;
+
+	position: relative;
 	top: 5px;
 	border-radius: 2px;
 	box-shadow: 0 0px 1px 0.5px #000;
 	background: #fff;
-	border-radius: 0.5rem;
+	border-radius: 0.6rem;
 	padding: 0.2rem 1rem;
 }
 
@@ -395,8 +405,15 @@ input {
 }
 
 .swiper-arrows {
+	display: block;
+	position: relative;
+	bottom: 270px;
+}
+
+.swiper-arrows div:nth-child(2n) {
 	display: none;
 }
+
 .swiper-button-next::after {
 	color: transparent;
 	margin-left: -1.5rem;
@@ -412,7 +429,7 @@ input {
 	position: absolute;
 	font-size: var(--big-font-size);
 	border-radius: 50%;
-	padding: 0.5rem;
+	padding: 1rem 1rem 0.5rem 1rem;
 	box-shadow: 0 0 10px 0.5px #ddd;
 	background-color: #fff;
 }
@@ -430,12 +447,14 @@ input {
 .fi {
 	color: #000;
 }
-
+.swiper-slide {
+	text-align: center;
+}
 /*=============== BENEFITS ===============*/
 
 .benefit {
 	position: relative;
-	margin-top: -720px;
+	margin-top: -770px;
 	top: 500px;
 	z-index: 200;
 }
@@ -533,6 +552,7 @@ input {
 	top: 20%;
 	left: 50;
 	display: flex;
+	z-index: 150;
 }
 
 .footer__links a {
@@ -608,6 +628,13 @@ input {
 		position: relative;
 	}
 
+	.login-ad {
+		display: flex;
+		width: 200px;
+		height: 500px;
+		background-color: #ffff00;
+	}
+
 	.nav__img,
 	.nav__img1,
 	.nav__img2 {
@@ -680,19 +707,22 @@ input {
 	}
 	/*=============== PRODUCTS ===============*/
 
-	.full span {
-		display: flex;
+	.products {
+		top: 77.5px;
 	}
-
 	.swiper-arrows {
-		display: block;
-		position: relative;
 		bottom: 200px;
 	}
-
+	.swiper-arrows div:nth-child(2n) {
+		display: flex;
+	}
 	.swiper-button-next,
 	.swiper-button-prev {
 		padding: 1.5rem 1.5rem 1rem 1.5rem;
+	}
+
+	.full span {
+		display: flex;
 	}
 
 	/*=============== BENEFITS ===============*/
@@ -770,6 +800,10 @@ input {
 
 	.products {
 		top: 160px;
+	}
+
+	.product__item {
+		left: -75px;
 	}
 
 	.product__actions {
