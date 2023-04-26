@@ -435,8 +435,8 @@ input {
 
 .benefit {
 	position: relative;
-	margin-top: 60px;
-	top: -290px;
+	margin-top: -720px;
+	top: 500px;
 	z-index: 200;
 }
 .benefits__div {
@@ -484,35 +484,42 @@ input {
 
 /*=============== FOOTER ===============*/
 
-.footer__image {
-	z-index: -10;
-	height: 650px;
-	width: 100vw;
-	margin-top: -320px;
+.footer {
+	position: relative;
+}
+
+.footer div {
+	position: relative;
 	overflow: hidden;
+}
+
+.footer__image {
+	display: flex;
+	position: relative;
+	height: 850px;
+	min-width: 1000px;
+	resize: none;
 }
 .footer__ab {
 	display: flex;
-	position: absolute;
 	justify-content: center;
+	position: relative;
+	top: 700px;
 	color: #fff;
-	right: 0;
-	left: 0;
-	transform: translate(-0%, 0%);
+	z-index: 100;
 }
 
 .footer__text a {
 	display: flex;
 	color: #fff;
-	height: 100%;
 }
 
 .footer__hooks {
 	display: flex;
+	justify-content: center;
 	position: absolute;
-	top: -40%;
 	left: 50%;
-	transform: translate(-50%, 0%);
+	transform: translate(-50%, 100%);
 }
 
 .footer__hooks a {
@@ -522,6 +529,9 @@ input {
 }
 
 .footer__links {
+	position: relative;
+	top: 20%;
+	left: 50;
 	display: flex;
 }
 
@@ -543,10 +553,12 @@ input {
 
 .footer__author {
 	display: flex;
+	position: relative;
+	top: 55%;
 	justify-content: center;
 	width: 100%;
 	font-size: var(--large-font-size);
-	margin: 40% 0;
+	margin: 50% 0;
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -685,11 +697,10 @@ input {
 
 	/*=============== BENEFITS ===============*/
 
-	.benefit {
-		position: relative;
-		top: -285px;
-	}
 	/*=============== FOOTER ===============*/
+	.footer__image {
+		width: 100vw;
+	}
 }
 
 /* For large devices */
@@ -767,7 +778,7 @@ input {
 
 	/*=============== BENEFITS ===============*/
 	.benefit {
-		top: -205px;
+		margin-top: -650px;
 	}
 
 	.benefits__ul {
