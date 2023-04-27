@@ -423,7 +423,7 @@ input {
 }
 
 .splide__pagination {
-	display: none;
+top: 500px;
 }
 /*=============== BENEFITS ===============*/
 
@@ -702,6 +702,9 @@ input {
 	}
 	.full span {
 		display: flex;
+	}
+	.splide__pagination {
+		top: 400px;
 	}
 
 	/*=============== BENEFITS ===============*/
