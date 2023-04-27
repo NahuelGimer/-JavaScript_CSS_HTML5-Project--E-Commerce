@@ -272,15 +272,18 @@ input {
 
 .products {
 	position: relative;
-	top: 100px;
+	top: 75px;
+	min-height: 750px;
 }
 
 .tab__items {
 	margin: 1.5rem;
+	height: 25vh;
+	cursor: pointer;
+	z-index: 100;
 }
 
 .tab__item {
-	min-height: 750px;
 }
 
 .products__container {
@@ -419,6 +422,9 @@ input {
 	background: none;
 }
 
+.splide__pagination {
+	display: none;
+}
 /*=============== BENEFITS ===============*/
 
 .benefit {
@@ -677,7 +683,7 @@ input {
 	/*=============== PRODUCTS ===============*/
 
 	.products {
-		top: 90px;
+		top: 100px;
 	}
 
 	.product__actions {
@@ -700,7 +706,7 @@ input {
 
 	/*=============== BENEFITS ===============*/
 	.benefit {
-		margin-top: -740px;
+		margin-top: -680px;
 	}
 
 	/*=============== FOOTER ===============*/
@@ -780,7 +786,7 @@ input {
 
 	/*=============== BENEFITS ===============*/
 	.benefit {
-		margin-top: -650px;
+		margin-top: -600px;
 	}
 
 	.benefits__ul {

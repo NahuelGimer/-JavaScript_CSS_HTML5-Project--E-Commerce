@@ -8,7 +8,7 @@ var splide = new Splide(".splide", {
 		next: "splide__arrow--next",
 	},
 	breakpoints: {
-		1250: {
+		1350: {
 			perPage: 1,
 		},
 		2440: {
