@@ -32,9 +32,10 @@
 
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!--==================== SWIPER CSS ====================-->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!--==================== SPILDE JS ====================-->
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
 
     <!--==================== SCROLL REVEAL ====================-->
 
@@ -155,10 +156,16 @@
 
         <!--==================== PRODUCTS ====================-->
         <section class="products section container" id="products">
-            <div class="tab__items">
-                <div class="tab__item swiper">
-                    <div class="products__container swiper-wrapper">
-                        <div class="product__item swiper-slide">
+            <div class="tab__items splide">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        < </button>
+                            <button class="splide__arrow splide__arrow--next">>
+                            </button>
+                </div>
+                <div class="tab__item splide__track">
+                    <div class="products__container splide__list">
+                        <div class="product__item splide__slide">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-1.jpg" alt="" class="product__img default">
@@ -191,7 +198,7 @@
                             </div>
                         </div>
 
-                        <div class="product__item swiper-slide">
+                        <div class="product__item splide__slide">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-2.jpg" alt="" class="product__img default">
@@ -220,7 +227,7 @@
                             </div>
                         </div>
 
-                        <div class="product__item swiper-slide">
+                        <div class="product__item splide__slide">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-3.jpg" alt="" class="product__img default">
@@ -233,7 +240,6 @@
                                         <i class="fi fi-rr-shopping-cart"></i>
                                     </a>
                                     <div class="product__actions"></div>
-
                                 </div>
 
                             </div>
@@ -252,7 +258,7 @@
                             </div>
                         </div>
 
-                        <div class="product__item swiper-slide">
+                        <div class="product__item splide__slide">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-4.jpg" alt="" class="product__img default">
@@ -280,7 +286,7 @@
                             </div>
                         </div>
 
-                        <div class="product__item swiper-slide">
+                        <div class="product__item splide__slide">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-5.jpg" alt="" class="product__img default">
@@ -313,7 +319,7 @@
                             </div>
                         </div>
 
-                        <div class="product__item swiper-slide">
+                        <div class="product__item splide__slide">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-6.jpg" alt="" class="product__img default">
@@ -341,7 +347,7 @@
                             </div>
                         </div>
 
-                        <div class="product__item swiper-slide">
+                        <div class="product__item splide__slide">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-7.jpg" alt="" class="product__img default">
@@ -373,7 +379,7 @@
                             </div>
                         </div>
 
-                        <div class="product__item swiper-slide">
+                        <div class="product__item splide__slide">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-8.jpg" alt="" class="product__img default">
@@ -398,14 +404,6 @@
                                     <span class="new__price">$238.85</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="swiper-arrows">
-                        <div class="swiper-button-next">
-                            <i class="fi fi-br-caret-right"></i>
-                        </div>
-                        <div class="swiper-button-prev">
-                            <i class="fi fi-br-caret-left"></i>
                         </div>
                     </div>
                 </div>
@@ -492,9 +490,10 @@
 
         </div>
     </footer>
-    <!--==================== SWIPER JS ====================-->
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!--==================== SPLIDE JS ====================-->
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
 
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>

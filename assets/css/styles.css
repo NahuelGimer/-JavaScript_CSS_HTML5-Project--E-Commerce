@@ -176,6 +176,7 @@ input {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 100;
 }
 
 .home__action {
@@ -185,6 +186,7 @@ input {
 .home__action:nth-child(2n) {
 	margin-top: 1rem;
 }
+
 .home__action div {
 	position: relative;
 }
@@ -270,9 +272,7 @@ input {
 
 .products {
 	position: relative;
-	margin: 0 auto;
-	top: 80px;
-	width: 100vw;
+	top: 85px;
 }
 
 .tab__items {
@@ -280,28 +280,32 @@ input {
 }
 
 .tab__item {
-	height: 100%;
 	min-height: 700px;
-	width: 90vw;
 }
+
 .products__container {
 	position: relative;
 }
 
 .product__item {
-	position: relative;
-	left: -50px;
+	left: 20px;
 	display: flex;
-	align-items: center;
-	justify-self: center;
-
 	position: relative;
-	top: 5px;
+	justify-content: center;
 	border-radius: 2px;
-	box-shadow: 0 0px 1px 0.5px #000;
 	background: #fff;
 	border-radius: 0.6rem;
 	padding: 0.2rem 1rem;
+	background: linear-gradient(to right, black 2px, transparent 2px) 0 0,
+		linear-gradient(to right, black 2px, transparent 2px) 0 100%,
+		linear-gradient(to left, black 2px, transparent 2px) 100% 0,
+		linear-gradient(to left, black 2px, transparent 2px) 100% 100%,
+		linear-gradient(to bottom, black 2px, transparent 2px) 0 0,
+		linear-gradient(to bottom, black 2px, transparent 2px) 100% 0,
+		linear-gradient(to top, black 2px, transparent 2px) 0 100%,
+		linear-gradient(to top, black 2px, transparent 2px) 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
 }
 
 .product__item:hover .product__price {
@@ -345,6 +349,7 @@ input {
 
 .product__price {
 	position: absolute;
+	left: 20px;
 	top: 361px;
 	font-size: var(--h4-font-size);
 }
@@ -352,7 +357,7 @@ input {
 .product__content {
 	display: flex;
 	flex-direction: row;
-	margin-left: 2%;
+	margin-left: 0%;
 }
 
 .product__content span {
@@ -363,6 +368,7 @@ input {
 
 .full {
 	position: absolute;
+	left: 15px;
 	top: 361px;
 	display: flex;
 	flex-direction: row;
@@ -398,58 +404,17 @@ input {
 	display: flex;
 }
 
-/* Swiper class */
+/*=============== SPLIDE ===============*/
 
-.swiper {
-	overflow: initial;
-}
-
-.swiper-arrows {
-	display: block;
-	position: relative;
-	bottom: 270px;
-}
-
-.swiper-arrows div:nth-child(2n) {
+.splide__arrows {
 	display: none;
-}
-
-.swiper-button-next::after {
-	color: transparent;
-	margin-left: -1.5rem;
-}
-
-.swiper-button-prev::after {
-	color: transparent;
-	margin-left: -1.2rem;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-	position: absolute;
-	font-size: var(--big-font-size);
-	border-radius: 50%;
-	padding: 1rem 1rem 0.5rem 1rem;
-	box-shadow: 0 0 10px 0.5px #ddd;
-	background-color: #fff;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-	background-color: #000;
-}
-
-.swiper-button-next:hover > .fi,
-.swiper-button-prev:hover > .fi {
-	color: #fff;
-}
-
-.fi {
+	position: relative;
+	top: 200px;
+	padding: 1.5rem 1.5rem 1rem 1.5rem;
 	color: #000;
+	background: none;
 }
-.swiper-slide {
-	text-align: center;
-}
+
 /*=============== BENEFITS ===============*/
 
 .benefit {
@@ -710,17 +675,6 @@ input {
 	.products {
 		top: 77.5px;
 	}
-	.swiper-arrows {
-		bottom: 200px;
-	}
-	.swiper-arrows div:nth-child(2n) {
-		display: flex;
-	}
-	.swiper-button-next,
-	.swiper-button-prev {
-		padding: 1.5rem 1.5rem 1rem 1.5rem;
-	}
-
 	.full span {
 		display: flex;
 	}
@@ -800,14 +754,6 @@ input {
 
 	.products {
 		top: 160px;
-	}
-
-	.product__item {
-		left: -75px;
-	}
-
-	.product__actions {
-		left: 95%;
 	}
 
 	/*=============== BENEFITS ===============*/
