@@ -460,6 +460,21 @@ input {
 	z-index: -200;
 }
 
+.product__item-1,
+.product__item-3,
+.product__item-5,
+.product__item-7 {
+	left: 20px;
+}
+.product__item-2 {
+	left: -20px;
+}
+.product__item-4,
+.product__item-6,
+.product__item-8 {
+	left: 4px;
+}
+
 .product__img.hover {
 	position: absolute;
 	top: 0;
@@ -555,11 +570,8 @@ input {
 }
 /*=============== SLIDER ===============*/
 
-.product__item-1,
-.product__item-3,
-.product__item-5,
-.product__item-7 {
-	left: 20px;
+.slider-container {
+	overflow: hidden;
 }
 
 .swiffy-slider > button,
@@ -569,6 +581,7 @@ input {
 
 .slider-indicators {
 	top: 315px;
+	margin-left: 5px;
 }
 /*=============== BENEFITS ===============*/
 
@@ -841,6 +854,7 @@ input {
 	.product__action2 {
 		width: 100vw;
 	}
+
 	.full {
 		left: 16%;
 	}
@@ -896,6 +910,7 @@ input {
 		right: -10px;
 	}
 	/*=============== SPOTS ===============*/
+
 	.spot,
 	.spots {
 		top: -30px;
@@ -935,6 +950,9 @@ input {
 
 	.product__item:hover .old__price {
 		display: flex;
+	}
+	.product__item:hover .product__price {
+		top: 76%;
 	}
 
 	.swiffy-slider > button,
