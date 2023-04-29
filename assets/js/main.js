@@ -1,3 +1,10 @@
+function openNav() {
+	document.getElementById("mySidenav").style.animation = "expand 0.3s forwards";
+}
+function closeNav() {
+	document.getElementById("mySidenav").style.animation = "collapse 0.3s forwards";
+}
+
 let loginF = false,
 	cartF = false,
 	heartF = false;
@@ -218,17 +225,3 @@ function heart8() {
 		document.getElementById("login-ad").classList.add("up");
 	}
 }
-
-var splide = new Splide(".splide", {
-	type: "loop",
-	perPage: 1,
-	autoplay: false,
-	classes: {
-		arrows: "splide__arrows",
-		arrow: "splide__arrow",
-		prev: "splide__arrow--prev",
-		next: "splide__arrow--next",
-	},
-});
-
-splide.mount();

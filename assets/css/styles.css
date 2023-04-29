@@ -65,13 +65,25 @@ h4 {
 ul {
 	list-style: none;
 }
-a {
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
 	text-decoration: none;
 	color: #000;
 }
 
 p {
 	line-height: 1.5rem;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	color: gray;
+	background-color: gray;
+	margin: 15px auto 10px auto;
 }
 
 img {
@@ -93,6 +105,65 @@ input {
 .up {
 	height: 10px;
 }
+
+/*=============== KEYFRAMES ===============*/
+
+.collapse {
+	animation-name: skills-up-front;
+	animation-duration: 0.45s;
+}
+
+@keyframes collapse {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-280px);
+	}
+}
+
+.expand {
+	animation-name: skills-up-front;
+	animation-duration: 0.45s;
+}
+
+@keyframes expand {
+	0% {
+		transform: translateX(-280px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+.show {
+	animation-name: skills-up-front;
+	animation-duration: 0.45s;
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.hide {
+	animation-name: skills-up-front;
+	animation-duration: 0.45s;
+}
+
+@keyframes hide {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 /*=============== BUTTONS ===============*/
 
 .btn {
@@ -155,6 +226,67 @@ input {
 .nav__img1,
 .nav__img2 {
 	display: none;
+}
+
+/*=============== NAVBAR ===============*/
+
+.sidenav {
+	max-width: 280px;
+	width: 85%;
+	overflow: hidden;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	transform-origin: left center;
+	z-index: 10000;
+	transform: translateX(-280px);
+}
+
+.sidenav:hover a span {
+	color: #000;
+}
+
+.sidenavHeader {
+	color: #fff;
+	font-weight: var(--weight-600);
+	background-color: rgb(35, 47, 62);
+	padding: 10px 0px 10px 30px;
+	font-size: var(--large-font-size);
+}
+
+.sidenavContentHeader {
+	margin-top: 5px;
+	padding: 15px 0 15px 25px;
+	font-size: var(--large-font-size);
+	font-weight: var(--weight-600);
+}
+
+.sidenavContent {
+	padding: 15px 0 15px 25px;
+}
+
+.sidenavContentRow {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 25px 15px 25px;
+}
+
+.sidenavContent:hover,
+.sidenavContentRow:hover {
+	background-color: #eaeded;
+}
+
+#closeBtn {
+	position: absolute;
+	top: 7.5px;
+	left: 250px;
+	color: #fff;
+	font-size: var(--h4-font-size);
+	cursor: pointer;
+	z-index: 100000;
 }
 
 /*=============== HOME ===============*/
@@ -280,7 +412,8 @@ input {
 
 .products {
 	position: relative;
-	top: 90px;
+	top: 75px;
+	left: 0px;
 	min-height: 750px;
 }
 
@@ -291,6 +424,7 @@ input {
 
 .products__container {
 	position: relative;
+	overflow: hidden;
 }
 
 .product__item {
@@ -301,16 +435,6 @@ input {
 	justify-content: center;
 	border-radius: 0.6rem;
 	padding: 0.2rem 1rem;
-	background: linear-gradient(to right, black 2px, transparent 2px) 0 0,
-		linear-gradient(to right, black 2px, transparent 2px) 0 100%,
-		linear-gradient(to left, black 2px, transparent 2px) 100% 0,
-		linear-gradient(to left, black 2px, transparent 2px) 100% 100%,
-		linear-gradient(to bottom, black 2px, transparent 2px) 0 0,
-		linear-gradient(to bottom, black 2px, transparent 2px) 100% 0,
-		linear-gradient(to top, black 2px, transparent 2px) 0 100%,
-		linear-gradient(to top, black 2px, transparent 2px) 100% 100%;
-	background-repeat: no-repeat;
-	background-size: 20px 20px;
 }
 
 .product__item:hover .product__price {
@@ -350,7 +474,6 @@ input {
 	width: 90vw;
 	top: -80%;
 	left: 90%;
-	z-index: 1000000000;
 	transform: translate(-50%, -50%);
 }
 
@@ -358,10 +481,11 @@ input {
 	top: 0%;
 }
 .action__btn {
+	position: relative;
 	bottom: -10%;
 	border-radius: 50%;
-	z-index: 10000;
 	cursor: pointer;
+	z-index: 1000000000;
 }
 
 .cart__btn {
@@ -380,10 +504,15 @@ input {
 	font-size: var(--large-font-size);
 }
 
+.cart::after,
+.heart::after {
+	display: none;
+}
+
 .product__price {
 	position: absolute;
 	left: 7.5%;
-	top: 85.5%;
+	top: 82.5%;
 	font-size: var(--h4-font-size);
 }
 
@@ -403,7 +532,7 @@ input {
 
 .full {
 	position: absolute;
-	top: 85.5%;
+	top: 82.5%;
 	left: 90px;
 	display: flex;
 	flex-direction: row;
@@ -424,30 +553,28 @@ input {
 .old__price {
 	display: none;
 }
+/*=============== SLIDER ===============*/
 
-.product__item:hover .old__price {
-	display: flex;
+.product__item-1,
+.product__item-3,
+.product__item-5,
+.product__item-7 {
+	left: 20px;
 }
 
-/*=============== SPLIDE ===============*/
-
-.splide__arrows {
+.swiffy-slider > button,
+.slider-indicators li {
 	display: none;
-	position: relative;
-	top: 200px;
-	padding: 1.5rem 1.5rem 1rem 1.5rem;
-	color: #000;
-	background: none;
 }
 
-.splide__pagination {
-	top: 500px;
+.slider-indicators {
+	top: 315px;
 }
 /*=============== BENEFITS ===============*/
 
 .benefit {
 	position: relative;
-	margin-top: -740px;
+	margin-top: -795px;
 	top: 480px;
 	z-index: 200;
 }
@@ -708,7 +835,7 @@ input {
 	/*=============== PRODUCTS ===============*/
 
 	.products {
-		top: 115px;
+		top: 80px;
 	}
 	.product__action1,
 	.product__action2 {
@@ -726,7 +853,7 @@ input {
 
 	/*=============== BENEFITS ===============*/
 	.benefit {
-		margin-top: -680px;
+		margin-top: -800px;
 	}
 
 	/*=============== FOOTER ===============*/
@@ -737,8 +864,6 @@ input {
 
 /* For large devices */
 @media screen and (min-width: 1350px) {
-	/*=============== NAV ===============*/
-
 	/*=============== HOME ===============*/
 	.home__text {
 		width: 550px;
@@ -807,6 +932,16 @@ input {
 		left: 11.5%;
 		margin-top: 4px;
 	}
+
+	.product__item:hover .old__price {
+		display: flex;
+	}
+
+	.swiffy-slider > button,
+	.slider-indicators li {
+		display: flex;
+	}
+
 	/*=============== BENEFITS ===============*/
 	.benefit {
 		margin-top: -620px;

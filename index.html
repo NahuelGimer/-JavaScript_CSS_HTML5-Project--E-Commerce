@@ -14,7 +14,7 @@
     <meta name="keywords" content="ecommerce, shoes">
     <meta name="robots" content="index">
     <meta name="robots" content="follow">
-    <meta property="og:title" content="E-Shoes">
+    <meta property=d"og:title" content="E-Shoes">
     <meta property="og:description" content="Ecommerce of Shoes">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nahuelgimer.github.io/ecommerce">
@@ -28,15 +28,16 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
     <!--==================== CSS ====================-->
 
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!--==================== SPILDE JS ====================-->
-    <link href="
-https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-" rel="stylesheet">
 
+    <!--==================== SWIPER CSS ====================-->
+
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">.css">
     <!--==================== SCROLL REVEAL ====================-->
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -51,10 +52,35 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <a href="#" class="nav__logo">
                 <img src="assets/img/logo.png" alt="" class="nav__logo-img">
             </a>
-            <div class="nav-menu" id="nav-menu">
+            <div class="nav-menu slider" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn">
+                        <div class="sidenav" id="mySideNav">
+                            <div id="closeBtn" onclick="closeNav()">&times</div>
+                            <div class="sidenavHeader">
+                                <div class="fas fa-user-circle"></div>Hello, Sign in
+                            </div>
+                            <div class="sidenavContentHeader">Trending</div>
+                            <a href="#">
+                                <div class="sidenavContent">Best Sellers</div>
+                            </a>
+                            <a href="#">
+                                <div class="sidenavContent">Best Sellers1</div>
+                            </a>
+                            <a href="#">
+                                <div class="sidenavContent">Best Sellers2</div>
+                            </a>
+
+                            <hr />
+
+                            <div class="sidenavContentHeader">Best Sellers 3</div>
+                            <a class="sidenavContentRow" href="#">
+                                <div class="sidenavRow">Amazon
+                                </div>
+                                <span class="fi fi-br-angle-right"></span>
+                            </a>
+                        </div>
+                        <a href="#" class="header__action-btn" onclick="openNav()">
                             <img src="assets/img/button.png" alt="" class="nav__img">
                             <span>Categories</span></a>
 
@@ -141,7 +167,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <img src="assets/img/men.webp" alt="" class="spots__image">
                     <span class="btn">Men</span>
                 </a>
-                <a href="#" class="spots__section">
+                <a href=" #" class="spots__section">
                     <img src="assets/img/women.webp" alt="" class="spots__image">
                     <span class="btn">Women</span>
                 </a>
@@ -154,16 +180,11 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
         <!--==================== PRODUCTS ====================-->
         <section class="products section container" id="products">
-            <div class="tab__items splide">
-                <div class="splide__arrows">
-                    <button class="splide__arrow splide__arrow--prev">
-                        < </button>
-                            <button class="splide__arrow splide__arrow--next">>
-                            </button>
-                </div>
-                <div class="tab__item splide__track">
-                    <div class="products__container splide__list">
-                        <div class="product__item splide__slide">
+            <div class="tab__items">
+                <div class="swiffy-slider slider-nav-dark slider-nav-sm slider-nav-autohide slider-item-first-visible slider-nav-nodelay slider-nav-page slider-nav-autoplay slider-nav-autopause slider-indicators-dark slider-indicators-highlight slider-nav-animation slider-nav-animation-fast"
+                    data-slider-nav-autoplay-interval="3000">
+                    <ul class=" products__container slider-container">
+                        <li class="product__item product__item-1" id="slide-visible">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-1.jpg" alt="" class="product__img default">
@@ -193,9 +214,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 </div>
 
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="product__item splide__slide">
+                        <li class="product__item product__item-2" id="slide-visible">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-2.jpg" alt="" class="product__img default">
@@ -223,9 +244,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 </div>
 
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="product__item splide__slide">
+                        <li class="product__item product__item-3">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-3.jpg" alt="" class="product__img default">
@@ -256,9 +277,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                     <span>Full</span>
                                 </div>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="product__item splide__slide">
+                        <li class="product__item product__item-4">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-4.jpg" alt="" class="product__img default">
@@ -284,9 +305,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                     <span class="new__price">$238.85</span>
                                 </div>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="product__item splide__slide">
+                        <li class="product__item product__item-5">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-5.jpg" alt="" class="product__img default">
@@ -318,9 +339,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 </div>
 
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="product__item splide__slide">
+                        <li class="product__item product__item-6">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-6.jpg" alt="" class="product__img default">
@@ -347,9 +368,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                     <span class="new__price">$238.85</span>
                                 </div>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="product__item splide__slide">
+                        <li class="product__item product__item-7">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-7.jpg" alt="" class="product__img default">
@@ -379,9 +400,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                     <span>Full</span>
                                 </div>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="product__item splide__slide">
+                        <li class="product__item product__item-8">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-8.jpg" alt="" class="product__img default">
@@ -407,8 +428,22 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                     <span class="new__price">$238.85</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
+                    <!-- Add Arrows -->
+                    <button type="button" class="slider-nav"></button>
+                    <button type="button" class="slider-nav slider-nav-next"></button>
+                    <!-- Add Pagination -->
+                    <ul class="slider-indicators">
+                        <li class="active"></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                    </ul>
                 </div>
 
             </div>
@@ -494,10 +529,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
         </div>
     </footer>
-    <!--==================== SPLIDE JS ====================-->
-    <script src="
-https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
-"></script>
+    <!--==================== SWIPER JS ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider-extensions.min.js"
+        crossorigin="anonymous" defer></script>
+
+
+
 
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
