@@ -413,7 +413,6 @@ input {
 .products {
 	position: relative;
 	top: 75px;
-	left: 0px;
 	min-height: 750px;
 }
 
@@ -429,7 +428,6 @@ input {
 
 .product__item {
 	cursor: pointer;
-	min-width: 200px;
 	display: flex;
 	position: relative;
 	justify-content: center;
@@ -438,7 +436,7 @@ input {
 }
 
 .product__item:hover .product__price {
-	top: 85%;
+	top: 79%;
 }
 
 .product__banner,
@@ -486,7 +484,7 @@ input {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	width: 90vw;
+	width: 80vw;
 	top: -80%;
 	left: 90%;
 	transform: translate(-50%, -50%);
@@ -495,16 +493,18 @@ input {
 .product__action2 {
 	top: 0%;
 }
+
 .action__btn {
 	position: relative;
 	bottom: -10%;
 	border-radius: 50%;
 	cursor: pointer;
-	z-index: 1000000000;
+	z-index: 10000;
 }
 
 .cart__btn {
 	color: transparent;
+	top: -15px;
 }
 
 .heart {
@@ -526,8 +526,8 @@ input {
 
 .product__price {
 	position: absolute;
-	left: 7.5%;
-	top: 82.5%;
+	left: 12.5%;
+	top: 79%;
 	font-size: var(--h4-font-size);
 }
 
@@ -541,14 +541,13 @@ input {
 	position: relative;
 	left: -5px;
 	margin-right: 10px;
-
 	margin-right: 20px;
 }
 
 .full {
 	position: absolute;
-	top: 82.5%;
-	left: 90px;
+	top: 79%;
+	left: 120px;
 	display: flex;
 	flex-direction: row;
 	margin-top: 3px;
@@ -852,17 +851,18 @@ input {
 	}
 	.product__action1,
 	.product__action2 {
-		width: 100vw;
+		width: 90vw;
 	}
 
 	.full {
-		left: 16%;
+		left: 21%;
 	}
 	.full span {
 		display: flex;
 	}
-	.splide__pagination {
-		top: 400px;
+	.swiffy-slider > button {
+		display: flex;
+		top: -10%;
 	}
 
 	/*=============== BENEFITS ===============*/
@@ -944,7 +944,7 @@ input {
 		top: 165px;
 	}
 	.full {
-		left: 11.5%;
+		left: 17%;
 		margin-top: 4px;
 	}
 
@@ -955,7 +955,6 @@ input {
 		top: 76%;
 	}
 
-	.swiffy-slider > button,
 	.slider-indicators li {
 		display: flex;
 	}

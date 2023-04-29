@@ -1,13 +1,19 @@
-function openNav() {
-	document.getElementById("mySidenav").style.animation = "expand 0.3s forwards";
-}
-function closeNav() {
-	document.getElementById("mySidenav").style.animation = "collapse 0.3s forwards";
-}
-
 let loginF = false,
-	cartF = false,
-	heartF = false;
+	cartF1 = false,
+	cartF2 = false,
+	cartF3 = false,
+	cartF4 = false,
+	cartF5 = false,
+	cartF6 = false,
+	cartF7 = false,
+	cartF8 = false,
+	heartF1 = false,
+	heartF3 = false,
+	heartF4 = false,
+	heartF5 = false,
+	heartF6 = false,
+	heartF7 = false,
+	heartF8 = false;
 
 function login() {
 	loginF = !loginF;
@@ -19,8 +25,8 @@ function login() {
 }
 
 function cart1() {
-	cartF = !cartF;
-	if (cartF) {
+	cartF1 = !cartF1;
+	if (cartF1) {
 		document.getElementById("cart1").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart1").classList.add("fi-ss-shopping-cart");
 		document.getElementById("login-ad").classList.add("up");
@@ -32,8 +38,8 @@ function cart1() {
 }
 
 function heart1() {
-	heartF = !heartF;
-	if (heartF) {
+	heartF1 = !heartF1;
+	if (heartF1) {
 		document.getElementById("heart1").classList.remove("fi-rs-heart");
 		document.getElementById("heart1").classList.add("fi-ss-heart");
 		document.getElementById("login-ad").classList.add("up");
@@ -45,8 +51,8 @@ function heart1() {
 }
 
 function cart2() {
-	cartF = !cartF;
-	if (cartF) {
+	cartF2 = !cartF2;
+	if (cartF2) {
 		document.getElementById("cart2").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart2").classList.add("fi-ss-shopping-cart");
 		document.getElementById("login-ad").classList.add("up");
@@ -58,8 +64,8 @@ function cart2() {
 }
 
 function heart2() {
-	heartF = !heartF;
-	if (heartF) {
+	heartF2 = !heartF2;
+	if (heartF2) {
 		document.getElementById("heart2").classList.remove("fi-rs-heart");
 		document.getElementById("heart2").classList.add("fi-ss-heart");
 		document.getElementById("login-ad").classList.add("up");
@@ -71,8 +77,8 @@ function heart2() {
 }
 
 function cart3() {
-	cartF = !cartF;
-	if (cartF) {
+	cartF3 = !cartF3;
+	if (cartF3) {
 		document.getElementById("cart3").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart3").classList.add("fi-ss-shopping-cart");
 		document.getElementById("login-ad").classList.add("up");
@@ -84,8 +90,8 @@ function cart3() {
 }
 
 function heart3() {
-	heartF = !heartF;
-	if (heartF) {
+	heartF3 = !heartF3;
+	if (heartF3) {
 		document.getElementById("heart3").classList.remove("fi-rs-heart");
 		document.getElementById("heart3").classList.add("fi-ss-heart");
 		document.getElementById("login-ad").classList.add("up");
@@ -97,8 +103,8 @@ function heart3() {
 }
 
 function cart4() {
-	cartF = !cartF;
-	if (cartF) {
+	cartF4 = !cartF4;
+	if (cartF4) {
 		document.getElementById("cart4").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart4").classList.add("fi-ss-shopping-cart");
 		document.getElementById("login-ad").classList.add("up");
@@ -110,8 +116,8 @@ function cart4() {
 }
 
 function heart4() {
-	heartF = !heartF;
-	if (heartF) {
+	heartF4 = !heartF4;
+	if (heartF4) {
 		document.getElementById("heart4").classList.remove("fi-rs-heart");
 		document.getElementById("heart4").classList.add("fi-ss-heart");
 		document.getElementById("login-ad").classList.add("up");
@@ -123,8 +129,8 @@ function heart4() {
 }
 
 function cart5() {
-	cartF = !cartF;
-	if (cartF) {
+	cartF5 = !cartF5;
+	if (cartF5) {
 		document.getElementById("cart5").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart5").classList.add("fi-ss-shopping-cart");
 		document.getElementById("login-ad").classList.add("up");
@@ -136,8 +142,8 @@ function cart5() {
 }
 
 function heart5() {
-	heartF = !heartF;
-	if (heartF) {
+	heartF5 = !heartF5;
+	if (heartF5) {
 		document.getElementById("heart5").classList.remove("fi-rs-heart");
 		document.getElementById("heart5").classList.add("fi-ss-heart");
 		document.getElementById("login-ad").classList.add("up");
@@ -149,8 +155,8 @@ function heart5() {
 }
 
 function cart6() {
-	cartF = !cartF;
-	if (cartF) {
+	cartF6 = !cartF6;
+	if (cartF6) {
 		document.getElementById("cart6").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart6").classList.add("fi-ss-shopping-cart");
 		document.getElementById("login-ad").classList.add("up");
@@ -162,8 +168,8 @@ function cart6() {
 }
 
 function heart6() {
-	heartF = !heartF;
-	if (heartF) {
+	heartF6 = !heartF6;
+	if (heartF6) {
 		document.getElementById("heart6").classList.remove("fi-rs-heart");
 		document.getElementById("heart6").classList.add("fi-ss-heart");
 		document.getElementById("login-ad").classList.add("up");
@@ -175,8 +181,8 @@ function heart6() {
 }
 
 function cart7() {
-	cartF = !cartF;
-	if (cartF) {
+	cartF7 = !cartF7;
+	if (cartF7) {
 		document.getElementById("cart7").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart7").classList.add("fi-ss-shopping-cart");
 		document.getElementById("login-ad").classList.add("up");
@@ -188,8 +194,8 @@ function cart7() {
 }
 
 function heart7() {
-	heartF = !heartF;
-	if (heartF) {
+	heartF7 = !heartF7;
+	if (heartF7) {
 		document.getElementById("heart7").classList.remove("fi-rs-heart");
 		document.getElementById("heart7").classList.add("fi-ss-heart");
 		document.getElementById("login-ad").classList.add("up");
@@ -201,8 +207,8 @@ function heart7() {
 }
 
 function cart8() {
-	cartF = !cartF;
-	if (cartF) {
+	cartF8 = !cartF8;
+	if (cartF8) {
 		document.getElementById("cart8").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart8").classList.add("fi-ss-shopping-cart");
 		document.getElementById("login-ad").classList.add("up");
@@ -214,8 +220,8 @@ function cart8() {
 }
 
 function heart8() {
-	heartF = !heartF;
-	if (heartF) {
+	heartF8 = !heartF8;
+	if (heartF8) {
 		document.getElementById("heart8").classList.remove("fi-rs-heart");
 		document.getElementById("heart8").classList.add("fi-ss-heart");
 		document.getElementById("login-ad").classList.add("up");
