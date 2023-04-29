@@ -90,6 +90,9 @@ input {
 	padding-block: 2rem;
 }
 
+.up {
+	height: 10px;
+}
 /*=============== BUTTONS ===============*/
 
 .btn {
@@ -103,6 +106,11 @@ input {
 .btn:hover {
 	background-color: #000;
 	color: #fff;
+}
+
+.cart__btn {
+	position: relative;
+	z-index: 300000;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -272,18 +280,13 @@ input {
 
 .products {
 	position: relative;
-	top: 75px;
+	top: 90px;
 	min-height: 750px;
 }
 
 .tab__items {
 	margin: 1.5rem;
 	height: 25vh;
-	cursor: pointer;
-	z-index: 100;
-}
-
-.tab__item {
 }
 
 .products__container {
@@ -291,12 +294,11 @@ input {
 }
 
 .product__item {
-	left: 20px;
+	cursor: pointer;
+	min-width: 200px;
 	display: flex;
 	position: relative;
 	justify-content: center;
-	border-radius: 2px;
-	background: #fff;
 	border-radius: 0.6rem;
 	padding: 0.2rem 1rem;
 	background: linear-gradient(to right, black 2px, transparent 2px) 0 0,
@@ -312,7 +314,7 @@ input {
 }
 
 .product__item:hover .product__price {
-	top: 335px;
+	top: 85%;
 }
 
 .product__banner,
@@ -330,7 +332,8 @@ input {
 }
 
 .product__images img {
-	height: 350px;
+	height: 300px;
+	z-index: -200;
 }
 
 .product__img.hover {
@@ -339,25 +342,48 @@ input {
 	left: 0;
 }
 
-.product__actions {
+.product__action1,
+.product__action2 {
 	display: flex;
 	flex-direction: column;
-	position: absolute;
-	height: 100%;
-	left: 95%;
-	top: 55%;
+	position: relative;
+	width: 90vw;
+	top: -80%;
+	left: 90%;
+	z-index: 1000000000;
 	transform: translate(-50%, -50%);
-	overflow: hidden;
+}
+
+.product__action2 {
+	top: 0%;
+}
+.action__btn {
+	bottom: -10%;
+	border-radius: 50%;
+	z-index: 10000;
+	cursor: pointer;
 }
 
 .cart__btn {
-	top: 81%;
+	color: transparent;
+}
+
+.heart {
+	position: relative;
+	height: 300px;
+	bottom: 100%;
+}
+
+.cart::before,
+.heart::before {
+	color: #000;
+	font-size: var(--large-font-size);
 }
 
 .product__price {
 	position: absolute;
 	left: 7.5%;
-	top: 90%;
+	top: 85.5%;
 	font-size: var(--h4-font-size);
 }
 
@@ -371,16 +397,18 @@ input {
 	position: relative;
 	left: -5px;
 	margin-right: 10px;
+
+	margin-right: 20px;
 }
 
 .full {
 	position: absolute;
-	left: 7.5%;
-	top: 90%;
+	top: 85.5%;
+	left: 90px;
 	display: flex;
 	flex-direction: row;
 	margin-top: 3px;
-	margin-left: 90px;
+	margin-left: 30px;
 }
 
 .full i,
@@ -391,16 +419,6 @@ input {
 .full span {
 	display: none;
 	margin-left: 10px;
-}
-
-.action__btn {
-	position: relative;
-	bottom: -60%;
-	border-radius: 50%;
-}
-
-.action__btn:first-child {
-	top: 0;
 }
 
 .old__price {
@@ -423,13 +441,13 @@ input {
 }
 
 .splide__pagination {
-top: 500px;
+	top: 500px;
 }
 /*=============== BENEFITS ===============*/
 
 .benefit {
 	position: relative;
-	margin-top: -770px;
+	margin-top: -740px;
 	top: 480px;
 	z-index: 200;
 }
@@ -480,11 +498,12 @@ top: 500px;
 
 .footer {
 	position: relative;
+	overflow: hidden;
+	z-index: -2000000;
 }
 
 .footer div {
 	position: relative;
-	overflow: hidden;
 }
 
 .footer__image {
@@ -603,11 +622,17 @@ top: 500px;
 		position: relative;
 	}
 
+	.nav__item:hover .login-ad {
+		background-color: #fff;
+	}
 	.login-ad {
+		position: absolute;
 		display: flex;
-		width: 200px;
-		height: 500px;
-		background-color: #ffff00;
+		top: -2px;
+		left: 48.5px;
+		width: 10px;
+		border-radius: 100%;
+		background-color: #000;
 	}
 
 	.nav__img,
@@ -683,22 +708,14 @@ top: 500px;
 	/*=============== PRODUCTS ===============*/
 
 	.products {
-		top: 100px;
+		top: 115px;
 	}
-
-	.product__actions {
-		position: relative;
+	.product__action1,
+	.product__action2 {
 		width: 100vw;
-		top: -35%;
-		left: 48%;
-	}
-	.product__price {
-		left: 5%;
-		top: 85%;
 	}
 	.full {
-		left: 5%;
-		top: 85%;
+		left: 16%;
 	}
 	.full span {
 		display: flex;
@@ -784,12 +801,15 @@ top: 500px;
 	/*=============== PRODUCTS ===============*/
 
 	.products {
-		top: 160px;
+		top: 165px;
 	}
-
+	.full {
+		left: 11.5%;
+		margin-top: 4px;
+	}
 	/*=============== BENEFITS ===============*/
 	.benefit {
-		margin-top: -600px;
+		margin-top: -620px;
 	}
 
 	.benefits__ul {

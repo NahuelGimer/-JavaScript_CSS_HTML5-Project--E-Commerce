@@ -22,7 +22,7 @@
     <link rel="canonical" href="https://nahuelgimer.github.io/ecommerce">
 
     <!--==================== ICONS ====================-->
-
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
@@ -47,7 +47,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
-
         <div class="nav container">
             <a href="#" class="nav__logo">
                 <img src="assets/img/logo.png" alt="" class="nav__logo-img">
@@ -75,17 +74,16 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <a href="#" class="header__action-btn">
                             <i class="fi fi-br-menu-burger"></i></a>
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn">
+                        <a href="#" class="header__action-btn" onclick="login()">
                             <i class="fi fi-rr-user"></i>
-                            <i class="login-ad"></i>
                             <img src="assets/img/button.png" alt="" class="nav__img2">
                             <span>Login</span>
                         </a>
+                        <i class="login-ad" id="login-ad"></i>
                     </li>
                 </ul>
             </div>
         </div>
-
     </header>
 
     <!--==================== MAIN ====================-->
@@ -170,16 +168,15 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-1.jpg" alt="" class="product__img default">
                                 </a>
-                                <div class="product__actions ">
-                                    <a href="#" class="action__btn" aria-label="Add to Wishlist">
-                                        <i class="fi fi-rs-heart"></i>
-                                    </a>
-                                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
-                                        <i class="fi fi-rr-shopping-cart"></i>
-                                    </a>
-
-
-
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart1()">
+                                        <i class="fi fi-rs-heart heart" id="heart1"></i>
+                                    </button>
+                                </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart1()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart1"></i>
+                                    </button>
                                 </div>
 
                             </div>
@@ -203,15 +200,17 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-2.jpg" alt="" class="product__img default">
                                 </a>
-                                <div class="product__actions ">
-                                    <a href="#" class="action__btn" aria-label="Add to Wishlist">
-                                        <i class="fi fi-rs-heart"></i>
-                                    </a>
-                                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
-                                        <i class="fi fi-rr-shopping-cart"></i>
-                                    </a>
-
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart2()">
+                                        <i class="fi fi-rs-heart heart" id="heart2"></i>
+                                    </button>
                                 </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart2()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart2"></i>
+                                    </button>
+                                </div>
+
 
                             </div>
                             <div class="product__content">
@@ -231,14 +230,17 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-3.jpg" alt="" class="product__img default">
                                 </a>
-                                <div class="product__actions ">
-                                    <a href="#" class="action__btn" aria-label="Add to Wishlist">
-                                        <i class="fi fi-rs-heart"></i>
-                                    </a>
-                                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
-                                        <i class="fi fi-rr-shopping-cart"></i>
-                                    </a>
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart3()">
+                                        <i class="fi fi-rs-heart heart" id="heart3"></i>
+                                    </button>
                                 </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart3()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart3"></i>
+                                    </button>
+                                </div>
+
 
                             </div>
                             <div class="product__content">
@@ -261,14 +263,15 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-4.jpg" alt="" class="product__img default">
                                 </a>
-                                <div class="product__actions ">
-                                    <a href="#" class="action__btn" aria-label="Add to Wishlist">
-                                        <i class="fi fi-rs-heart"></i>
-                                    </a>
-                                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
-                                        <i class="fi fi-rr-shopping-cart"></i>
-                                    </a>
-
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart4()">
+                                        <i class="fi fi-rs-heart heart" id="heart4"></i>
+                                    </button>
+                                </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart4()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart4"></i>
+                                    </button>
                                 </div>
 
                             </div>
@@ -288,14 +291,17 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-5.jpg" alt="" class="product__img default">
                                 </a>
-                                <div class="product__actions ">
-                                    <a href="#" class="action__btn" aria-label="Add to Wishlist">
-                                        <i class="fi fi-rs-heart"></i>
-                                        <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
-                                            <i class="fi fi-rr-shopping-cart"></i>
-                                        </a>
-
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart5()">
+                                        <i class="fi fi-rs-heart heart" id="heart5"></i>
+                                    </button>
                                 </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart5()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart5"></i>
+                                    </button>
+                                </div>
+
 
                             </div>
                             <div class="product__content">
@@ -319,14 +325,17 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-6.jpg" alt="" class="product__img default">
                                 </a>
-                                <div class="product__actions ">
-                                    <a href="#" class="action__btn" aria-label="Add to Wishlist">
-                                        <i class="fi fi-rs-heart"></i>
-                                        <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
-                                            <i class="fi fi-rr-shopping-cart"></i>
-                                        </a>
-
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart6()">
+                                        <i class="fi fi-rs-heart heart" id="heart6"></i>
+                                    </button>
                                 </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart6()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart6"></i>
+                                    </button>
+                                </div>
+
 
                             </div>
                             <div class="product__content">
@@ -345,14 +354,15 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-7.jpg" alt="" class="product__img default">
                                 </a>
-                                <div class="product__actions ">
-                                    <a href="#" class="action__btn" aria-label="Add to Wishlist">
-                                        <i class="fi fi-rs-heart"></i>
-                                    </a>
-                                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
-                                        <i class="fi fi-rr-shopping-cart"></i>
-                                    </a>
-
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart7()">
+                                        <i class="fi fi-rs-heart heart" id="heart7"></i>
+                                    </button>
+                                </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart7()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart7"></i>
+                                    </button>
                                 </div>
 
                             </div>
@@ -376,15 +386,17 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 <a href="#" class="product__images">
                                     <img src="assets/img/product-8.jpg" alt="" class="product__img default">
                                 </a>
-                                <div class="product__actions ">
-                                    <a href="#" class="action__btn" aria-label="Add to Wishlist">
-                                        <i class="fi fi-rs-heart"></i>
-                                    </a>
-                                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
-                                        <i class="fi fi-rr-shopping-cart"></i>
-                                    </a>
-
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart8()">
+                                        <i class="fi fi-rs-heart heart" id="heart8"></i>
+                                    </button>
                                 </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart8()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart8"></i>
+                                    </button>
+                                </div>
+
                             </div>
                             <div class="product__content">
                                 <a href="#">
