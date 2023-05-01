@@ -53,11 +53,9 @@
     <header class="header" id="header">
         <div id="overlay" onclick="closeNav()"></div>
         <div class="nav container">
-            <a href="#" class="nav__logo">
-                <img src="assets/img/logo.png" alt="" class="nav__logo-img">
-            </a>
             <div class="nav-menu slider" id="nav-menu">
                 <ul class="nav__list">
+
                     <li class="nav__item">
                         <div class="sidenav" id="sidenav">
                             <div class="sidenavContainerSub" id="subContainer1">
@@ -124,10 +122,10 @@
                             <div id="closeBtn" onclick="closeNav()">&times</div>
 
                             <div id="mainContainer">
-                                <div class="sidenavHeader">
-                                    <div class="fas fa-user-circle"></div>
+                                <a href="#" class="sidenavHeader">
+                                    <i class="fas fa-user-circle"></i>
                                     <span>Hello, Sign In</span>
-                                </div>
+                                </a>
                                 <div class="sidenavContentHeader">Trending</div>
                                 <a href="#">
                                     <div class="sidenavContent">Air Force</div>
@@ -167,15 +165,21 @@
                             </div>
                         </div>
                         <a href="#" class="header__action-btn" onclick="openNav()">
-                            <img src="assets/img/button.png" alt="" class="nav__img">
-                            <span>Categories</span></a>
-
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="header__action-btn">
                             <img src="assets/img/button.png" alt="" class="nav__img1">
-                            <span>Search</span>
+                            <span>Categories</span></a>
+                    </li>
+
+                    <li class="nav__item"><a href="#" class="nav__logo">
+                            <img src="assets/img/logo.png" alt="" class="nav__logo-img">
                         </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="header__action-btn" onclick="login()">
+                            <img src="assets/img/button.png" alt="" class="nav__img2">
+                            <span>Login</span>
+                        </a>
+                        <i class="login-ad" id="login-ad"></i>
                     </li>
 
                 </ul>
@@ -185,13 +189,6 @@
                     <li class="nav__item">
                         <a href="#" class="header__action-btn" onclick="openNav()">
                             <i class="fi fi-br-menu-burger"></i></a>
-                    <li class="nav__item">
-                        <a href="#" class="header__action-btn" onclick="login()">
-                            <i class="fi fi-rr-user"></i>
-                            <img src="assets/img/button.png" alt="" class="nav__img2">
-                            <span>Login</span>
-                        </a>
-                        <i class="login-ad" id="login-ad"></i>
                     </li>
                 </ul>
             </div>

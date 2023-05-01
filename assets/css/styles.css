@@ -349,8 +349,7 @@ input {
 /*=============== HEADER & NAV ===============*/
 
 .nav {
-	height: calc(var(--header-height) + 2.5rem);
-	column-gap: 1rem;
+	height: calc(var(--header-height) + 0.5rem);
 	display: flex;
 	justify-content: space-between;
 }
@@ -363,38 +362,37 @@ input {
 	font-size: var(--large-font-size);
 }
 
-.nav__logo-img {
-	position: absolute;
-	top: -10px;
-	width: 100px;
-}
-
 .nav__list,
 .nav__item {
-	column-gap: 2.5rem;
 	position: relative;
-	right: 10px;
+	right: 12.5px;
+	top: 3px;
 }
 
-.nav__item a span {
-	display: none;
-}
-
-.nav__item:nth-child(2n) {
-	display: none;
-}
-
+.nav__item .header__action-btn span,
 .nav__img,
 .nav__img1,
 .nav__img2 {
 	display: none;
 }
 
+.nav__logo-img {
+	position: relative;
+	width: 75px;
+	top: -25px;
+}
+
+.nav__item:nth-child(2n) {
+	display: flex;
+	position: relative;
+	top: 18px;
+}
+
 /*=============== NAVBAR ===============*/
 
 #closeBtn {
 	position: absolute;
-	top: 7.5px;
+	top: 5px;
 	left: 92%;
 	color: #fff;
 	font-size: var(--h4-font-size);
@@ -431,26 +429,30 @@ input {
 	background-color: #fff;
 	transform-origin: left center;
 	z-index: 10000;
-	transform: translateX(-280px);
-}
-
-.sidenav:hover a span {
-	color: #000;
+	transform: translateX(-100%);
 }
 
 .sidenavHeader {
+	display: block;
+	position: relative;
+	top: -6px;
+	min-height: 22px;
+	width: 100%;
 	color: #fff;
 	font-weight: var(--weight-600);
 	background-color: #000;
 	padding: 10px 0px 10px 30px;
 	font-size: var(--large-font-size);
 }
+
 .sidenavHeader span {
-	margin-left: -5px;
+	position: relative;
+	top: 5px;
+	left: -5px;
+	color: #fff;
 }
 
 .sidenavContentHeader {
-	margin-top: 5px;
 	padding: 15px 0 15px 25px;
 	font-size: var(--large-font-size);
 	font-weight: var(--weight-600);
@@ -490,13 +492,17 @@ input {
 
 .mainMenu i,
 .mainMenu span {
-	color: #fff;
 	position: relative;
+	color: #fff;
 }
 
 .mainMenu i {
-	top: 2.5px;
+	top: 5px;
 	right: 7.5px;
+}
+
+.mainMenu span {
+	top: 3px;
 }
 
 .nav__item:hover .mainMenu i {
@@ -823,12 +829,12 @@ input {
 .benefits__action {
 	display: flex;
 	flex-direction: row;
-	margin: 20px 0px;
+	margin: 20px auto;
 	transform: translate(-7.5%, 0%);
 }
 
 .benefits__action:last-child {
-	margin: 0;
+	margin: auto;
 }
 .benefits__action > div > a {
 	color: #fff;
@@ -940,47 +946,41 @@ input {
 @media screen and (min-width: 640px) {
 	/*=============== NAV ===============*/
 
+	.nav {
+		justify-content: center;
+	}
+
+	.nav__menu {
+		display: none;
+	}
+
 	.nav__logo-img {
-		position: relative;
-		top: -25px;
-		margin: 1rem;
-		margin-top: 2.5rem;
-	}
-
-	.nav__list,
-	.nav__item {
-		right: 20px;
-	}
-
-	.nav__item {
-		margin-right: 30%;
+		width: 100px;
 	}
 
 	.nav__item .header__action-btn span {
 		display: flex;
-		color: #000;
+		position: relative;
 		font-weight: var(--weight-600);
+		font-size: var(--large-font-size);
+		top: 5px;
+		left: -9.5px;
 	}
 
 	.nav__item .header__action-btn i {
 		display: none;
 	}
 
-	.nav__item:nth-child(2n) {
-		display: flex;
-	}
-
 	.login-ad {
 		position: absolute;
 		display: flex;
-		top: -2px;
-		left: 48.5px;
+		top: 5px;
+		left: 51.5px;
 		width: 10px;
 		border-radius: 100%;
 		background-color: #000;
 	}
 
-	.nav__img,
 	.nav__img1,
 	.nav__img2 {
 		position: absolute;
@@ -989,19 +989,17 @@ input {
 		z-index: -20px;
 	}
 
-	.nav__img {
-		top: -6px;
-		left: -22px;
-	}
 	.nav__img1 {
-		top: -7px;
-		left: -19px;
-		min-width: 100px;
+		top: -3px;
+		left: -35px;
+		min-height: 40px;
+		min-width: 160px;
 	}
 	.nav__img2 {
-		top: -7px;
-		left: -21px;
-		min-width: 90px;
+		top: -4px;
+		left: -32px;
+		min-height: 40px;
+		min-width: 100px;
 	}
 
 	/*=============== SIDENAV ===============*/
@@ -1091,6 +1089,20 @@ input {
 /* For large devices */
 @media screen and (min-width: 1350px) {
 	/*=============== NAV ===============*/
+
+	.nav {
+		position: relative;
+		top: -5px;
+	}
+
+	.nav__logo-img {
+		width: 125px;
+	}
+
+	.nav__item .header__action-btn span {
+		font-size: var(--h4-font-size);
+		left: -11.5px;
+	}
 
 	.nav__item:hover .nav__img,
 	.nav__item:hover .nav__img1,
