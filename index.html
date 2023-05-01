@@ -29,15 +29,18 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
     <!--==================== CSS ====================-->
 
     <link rel="stylesheet" href="assets/css/styles.css">
 
 
-    <!--==================== SWIPER CSS ====================-->
+    <!--==================== SWIFFY CSS ====================-->
 
     <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
-        crossorigin="anonymous">.css">
+        crossorigin="anonymous">
+
     <!--==================== SCROLL REVEAL ====================-->
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -48,6 +51,7 @@
 
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
+        <div id="overlay" onclick="closeNav()"></div>
         <div class="nav container">
             <a href="#" class="nav__logo">
                 <img src="assets/img/logo.png" alt="" class="nav__logo-img">
@@ -55,30 +59,112 @@
             <div class="nav-menu slider" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <div class="sidenav" id="mySideNav">
-                            <div id="closeBtn" onclick="closeNav()">&times</div>
-                            <div class="sidenavHeader">
-                                <div class="fas fa-user-circle"></div>Hello, Sign in
-                            </div>
-                            <div class="sidenavContentHeader">Trending</div>
-                            <a href="#">
-                                <div class="sidenavContent">Best Sellers</div>
-                            </a>
-                            <a href="#">
-                                <div class="sidenavContent">Best Sellers1</div>
-                            </a>
-                            <a href="#">
-                                <div class="sidenavContent">Best Sellers2</div>
-                            </a>
-
-                            <hr />
-
-                            <div class="sidenavContentHeader">Best Sellers 3</div>
-                            <a class="sidenavContentRow" href="#">
-                                <div class="sidenavRow">Amazon
+                        <div class="sidenav" id="sidenav">
+                            <div class="sidenavContainerSub" id="subContainer1">
+                                <div class=" mainMenu" onclick="sub1()">
+                                    <div class="sidenavHeader">
+                                        <i class="fi fi-rs-angle-left"></i>
+                                        <span>Main Menu</span>
+                                    </div>
+                                    <div class="sidenavContentHeader">Men</div>
+                                    <a href="#" onclick="closeNav()">
+                                        <div class="sidenavContent">Air Force</div>
+                                    </a>
+                                    <a href="#" onclick="closeNav()">
+                                        <div class="sidenavContent">Dunk</div>
+                                    </a>
                                 </div>
-                                <span class="fi fi-br-angle-right"></span>
-                            </a>
+                            </div>
+                            <div class="sidenavContainerSub" id="subContainer2">
+                                <div class=" mainMenu" onclick="sub2()">
+                                    <div class="sidenavHeader">
+                                        <i class="fi fi-rs-angle-left"></i>
+                                        <span>Main Menu</span>
+                                    </div>
+                                    <div class="sidenavContentHeader">Woman</div>
+                                    <a href="#" onclick="closeNav()">
+                                        <div class="sidenavContent">Air Force</div>
+                                    </a>
+                                    <a href="#" onclick="closeNav()">
+                                        <div class="sidenavContent">Dunk</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="sidenavContainerSub" id="subContainer3">
+                                <div class=" mainMenu" onclick="sub3()">
+                                    <div class="sidenavHeader">
+                                        <i class="fi fi-rs-angle-left"></i>
+                                        <span>Main Menu</span>
+                                    </div>
+                                    <div class="sidenavContentHeader">Boy</div>
+                                    <a href="#" onclick="closeNav()">
+                                        <div class="sidenavContent">Air Force</div>
+                                    </a>
+                                    <a href="#" onclick="closeNav()">
+                                        <div class="sidenavContent">Dunk</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="sidenavContainerSub" id="subContainer4">
+                                <div class=" mainMenu" onclick="sub4()">
+                                    <div class="sidenavHeader">
+                                        <i class="fi fi-rs-angle-left"></i>
+                                        <span>Main Menu</span>
+                                    </div>
+                                    <div class="sidenavContentHeader">Girl</div>
+                                    <a href="#" onclick="closeNav()">
+                                        <div class="sidenavContent">Air Force</div>
+                                    </a>
+                                    <a href="#" onclick="closeNav()">
+                                        <div class="sidenavContent">Dunk</div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="closeBtn" onclick="closeNav()">&times</div>
+
+                            <div id="mainContainer">
+                                <div class="sidenavHeader">
+                                    <div class="fas fa-user-circle"></div>
+                                    <span>Hello, Sign In</span>
+                                </div>
+                                <div class="sidenavContentHeader">Trending</div>
+                                <a href="#">
+                                    <div class="sidenavContent">Air Force</div>
+                                </a>
+                                <a href="#">
+                                    <div class="sidenavContent">Dunk</div>
+                                </a>
+
+                                <hr />
+                                <div class="sidenavContentHeader">Type</div>
+                                <a class="sidenavContentRow" href="#" onclick="sub1()">
+                                    <div class="sidenavRow">Men
+                                    </div>
+                                    <i class="fi fi-rs-angle-right"></i>
+                                </a>
+                                <a class="sidenavContentRow" href="#" onclick="sub2()">
+                                    <div class="sidenavRow">Women
+                                    </div>
+                                    <i class="fi fi-rs-angle-right"></i>
+                                </a>
+                                <a class="sidenavContentRow" href="#" onclick="drop()">
+                                    <div class="sidenavRow">Kids
+                                    </div>
+                                    <i class="fi fi-rs-angle-down" id="dropContainerArrow"></i>
+                                    <div class="sidenavContainerDrop" id="dropContainerDiv">
+                                        <hr />
+                                        <a class="sidenavContentRow" href="#" onclick="sub3()">
+                                            <div class="sidenavRow">Boy</div>
+                                            <i class="fi fi-rs-angle-right"></i>
+                                        </a>
+                                        <a class="sidenavContentRow" href="#" onclick="sub4()">
+                                            <div class="sidenavRow">Girl</div>
+                                            <i class="fi fi-rs-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                         <a href="#" class="header__action-btn" onclick="openNav()">
                             <img src="assets/img/button.png" alt="" class="nav__img">
@@ -97,7 +183,7 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn">
+                        <a href="#" class="header__action-btn" onclick="openNav()">
                             <i class="fi fi-br-menu-burger"></i></a>
                     <li class="nav__item">
                         <a href="#" class="header__action-btn" onclick="login()">
@@ -529,14 +615,12 @@
 
         </div>
     </footer>
-    <!--==================== SWIPER JS ====================-->
+    <!--==================== SWIFFY JS ====================-->
+
     <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
         defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider-extensions.min.js"
         crossorigin="anonymous" defer></script>
-
-
-
 
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
