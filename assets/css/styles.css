@@ -955,6 +955,7 @@ input {
 	}
 
 	.nav__logo-img {
+		top: -27px;
 		width: 100px;
 	}
 
@@ -963,7 +964,7 @@ input {
 		position: relative;
 		font-weight: var(--weight-600);
 		font-size: var(--large-font-size);
-		top: 5px;
+		top: 0px;
 		left: -9.5px;
 	}
 
@@ -974,8 +975,8 @@ input {
 	.login-ad {
 		position: absolute;
 		display: flex;
-		top: 5px;
-		left: 51.5px;
+		top: 4px;
+		left: 49.5px;
 		width: 10px;
 		border-radius: 100%;
 		background-color: #000;
@@ -989,16 +990,18 @@ input {
 		z-index: -20px;
 	}
 
-	.nav__img1 {
-		top: -3px;
-		left: -35px;
+	.nav__img1,
+	.nav__img2 {
+		top: -4px;
 		min-height: 40px;
+	}
+
+	.nav__img1 {
+		left: -35px;
 		min-width: 160px;
 	}
 	.nav__img2 {
-		top: -4px;
 		left: -32px;
-		min-height: 40px;
 		min-width: 100px;
 	}
 
@@ -1101,6 +1104,7 @@ input {
 
 	.nav__item .header__action-btn span {
 		font-size: var(--h4-font-size);
+		top: 5px;
 		left: -11.5px;
 	}
 
