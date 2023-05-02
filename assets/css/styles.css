@@ -983,8 +983,8 @@ input {
 		position: relative;
 		font-weight: var(--weight-600);
 		font-size: var(--large-font-size);
-		top: 0px;
-		left: -9.5px;
+		top: -5px;
+		left: -3px;
 		font-family: "Bruno Ace SC", cursive;
 	}
 
@@ -1119,8 +1119,7 @@ input {
 
 	.nav__item .header__action-btn span {
 		font-size: var(--h4-font-size);
-		top: 5px;
-		left: -11.5px;
+		top: 0px;
 	}
 
 	.nav__item:hover .nav__img,
