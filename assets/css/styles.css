@@ -348,6 +348,10 @@ input {
 
 /*=============== HEADER & NAV ===============*/
 
+#login-ad {
+	display: none;
+}
+
 .nav {
 	height: calc(var(--header-height) + 0.5rem);
 	display: flex;
@@ -365,8 +369,8 @@ input {
 .nav__list,
 .nav__item {
 	position: relative;
-	right: 12.5px;
-	top: 3px;
+	right: 15px;
+	top: 5px;
 }
 
 .nav__item .header__action-btn span,
@@ -380,12 +384,23 @@ input {
 	position: relative;
 	width: 75px;
 	top: -25px;
+	right: -7.5px;
 }
 
 .nav__item:nth-child(2n) {
 	display: flex;
 	position: relative;
 	top: 18px;
+}
+
+.ad {
+	position: absolute;
+	display: flex;
+	top: -10px;
+	left: 20px;
+	width: 10px;
+	border-radius: 100%;
+	background-color: #000;
 }
 
 /*=============== NAVBAR ===============*/
@@ -946,6 +961,9 @@ input {
 /* For medium devices */
 @media screen and (min-width: 640px) {
 	/*=============== NAV ===============*/
+	#login-ad {
+		display: flex;
+	}
 
 	.nav {
 		justify-content: center;
@@ -974,16 +992,6 @@ input {
 		display: none;
 	}
 
-	.login-ad {
-		position: absolute;
-		display: flex;
-		top: 4px;
-		left: 57.5px;
-		width: 10px;
-		border-radius: 100%;
-		background-color: #000;
-	}
-
 	.nav__img1,
 	.nav__img2 {
 		position: absolute;
@@ -1005,6 +1013,11 @@ input {
 	.nav__img2 {
 		left: -27.5px;
 		min-width: 100px;
+	}
+
+	.ad {
+		top: -4px;
+		left: 45.5px;
 	}
 
 	/*=============== SIDENAV ===============*/
@@ -1121,8 +1134,13 @@ input {
 		color: #fff;
 	}
 
-	.nav__item:hover .login-ad {
+	.nav__item:hover .ad {
 		background-color: #fff;
+	}
+
+	.ad {
+		top: 2.5px;
+		left: 57.5px;
 	}
 
 	/*=============== SIDENAV ===============*/

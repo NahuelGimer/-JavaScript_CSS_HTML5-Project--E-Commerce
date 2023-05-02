@@ -111,7 +111,8 @@ function drop() {
 	}
 }
 
-function login() {
+function ad() {
+	document.getElementById("categories-ad").classList.remove("up");
 	document.getElementById("login-ad").classList.remove("up");
 }
 
@@ -120,11 +121,11 @@ function cart1() {
 	if (cartF1) {
 		document.getElementById("cart1").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart1").classList.add("fi-ss-shopping-cart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("cart1").classList.remove("fi-ss-shopping-cart");
 		document.getElementById("cart1").classList.add("fi-rs-shopping-cart");
-		document.getElementById("login-ad").classList.add("up");
 	}
 }
 
@@ -133,6 +134,7 @@ function heart1() {
 	if (heartF1) {
 		document.getElementById("heart1").classList.remove("fi-rs-heart");
 		document.getElementById("heart1").classList.add("fi-ss-heart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("heart1").classList.remove("fi-ss-heart");
@@ -145,6 +147,7 @@ function cart2() {
 	if (cartF2) {
 		document.getElementById("cart2").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart2").classList.add("fi-ss-shopping-cart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("cart2").classList.remove("fi-ss-shopping-cart");
@@ -157,6 +160,7 @@ function heart2() {
 	if (heartF2) {
 		document.getElementById("heart2").classList.remove("fi-rs-heart");
 		document.getElementById("heart2").classList.add("fi-ss-heart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("heart2").classList.remove("fi-ss-heart");
@@ -169,6 +173,7 @@ function cart3() {
 	if (cartF3) {
 		document.getElementById("cart3").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart3").classList.add("fi-ss-shopping-cart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("cart3").classList.remove("fi-ss-shopping-cart");
@@ -181,6 +186,7 @@ function heart3() {
 	if (heartF3) {
 		document.getElementById("heart3").classList.remove("fi-rs-heart");
 		document.getElementById("heart3").classList.add("fi-ss-heart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("heart3").classList.remove("fi-ss-heart");
@@ -193,6 +199,7 @@ function cart4() {
 	if (cartF4) {
 		document.getElementById("cart4").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart4").classList.add("fi-ss-shopping-cart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("cart4").classList.remove("fi-ss-shopping-cart");
@@ -205,6 +212,7 @@ function heart4() {
 	if (heartF4) {
 		document.getElementById("heart4").classList.remove("fi-rs-heart");
 		document.getElementById("heart4").classList.add("fi-ss-heart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("heart4").classList.remove("fi-ss-heart");
@@ -217,6 +225,7 @@ function cart5() {
 	if (cartF5) {
 		document.getElementById("cart5").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart5").classList.add("fi-ss-shopping-cart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("cart5").classList.remove("fi-ss-shopping-cart");
@@ -229,6 +238,7 @@ function heart5() {
 	if (heartF5) {
 		document.getElementById("heart5").classList.remove("fi-rs-heart");
 		document.getElementById("heart5").classList.add("fi-ss-heart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("heart5").classList.remove("fi-ss-heart");
@@ -241,6 +251,7 @@ function cart6() {
 	if (cartF6) {
 		document.getElementById("cart6").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart6").classList.add("fi-ss-shopping-cart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("cart6").classList.remove("fi-ss-shopping-cart");
@@ -253,6 +264,7 @@ function heart6() {
 	if (heartF6) {
 		document.getElementById("heart6").classList.remove("fi-rs-heart");
 		document.getElementById("heart6").classList.add("fi-ss-heart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("heart6").classList.remove("fi-ss-heart");
@@ -265,6 +277,7 @@ function cart7() {
 	if (cartF7) {
 		document.getElementById("cart7").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart7").classList.add("fi-ss-shopping-cart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("cart7").classList.remove("fi-ss-shopping-cart");
@@ -277,6 +290,7 @@ function heart7() {
 	if (heartF7) {
 		document.getElementById("heart7").classList.remove("fi-rs-heart");
 		document.getElementById("heart7").classList.add("fi-ss-heart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("heart7").classList.remove("fi-ss-heart");
@@ -289,6 +303,7 @@ function cart8() {
 	if (cartF8) {
 		document.getElementById("cart8").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart8").classList.add("fi-ss-shopping-cart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("cart8").classList.remove("fi-ss-shopping-cart");
@@ -301,6 +316,7 @@ function heart8() {
 	if (heartF8) {
 		document.getElementById("heart8").classList.remove("fi-rs-heart");
 		document.getElementById("heart8").classList.add("fi-ss-heart");
+		document.getElementById("categories-ad").classList.add("up");
 		document.getElementById("login-ad").classList.add("up");
 	} else {
 		document.getElementById("heart8").classList.remove("fi-ss-heart");

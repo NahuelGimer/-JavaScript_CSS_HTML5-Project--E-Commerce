@@ -166,31 +166,35 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="#" class="header__action-btn" onclick="openNav()">
-                            <img src="assets/img/button.png" alt="" class="nav__img1">
-                            <span>categories</span></a>
+
+                        <a href="#" class="header__action-btn" onclick="openNav();">
+                            <img src="assets/img/button.png" alt="Background Categories" class="nav__img1">
+                            <span>categories</span>
+                        </a>
                     </li>
 
-                    <li class="nav__item"><a href="#" class="nav__logo">
+                    <li class="nav__item">
+                        <a href="#" class="nav__logo">
                             <img src="assets/img/logo.png" alt="E-Shoes Logo" class="nav__logo-img">
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn" onclick="login()">
-                            <img src="assets/img/button.png" alt="" class="nav__img2">
+                        <a href="#" class="header__action-btn" onclick="ad()">
+                            <img src="assets/img/button.png" alt="Background Login" class="nav__img2">
                             <span>login</span>
+                            <i class="ad" id="login-ad"></i>
                         </a>
-                        <i class="login-ad" id="login-ad"></i>
                     </li>
-
                 </ul>
             </div>
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn" onclick="openNav()">
-                            <i class="fi fi-br-menu-burger"></i></a>
+                        <a href="#" class="header__action-btn" onclick="openNav(); ad()">
+                            <i class="fi fi-br-menu-burger"></i>
+                            <i class="ad" id="categories-ad"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
