@@ -1121,6 +1121,19 @@ input {
 		font-size: var(--h4-font-size);
 		top: 0px;
 	}
+	.nav__img1,
+	.nav__img2 {
+		top: -5px;
+	}
+
+	.nav__img1 {
+		left: -35px;
+		min-width: 205px;
+	}
+	.nav__img2 {
+		left: -20px;
+		min-width: 100px;
+	}
 
 	.nav__item:hover .nav__img,
 	.nav__item:hover .nav__img1,
