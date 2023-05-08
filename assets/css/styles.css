@@ -79,18 +79,17 @@ p {
 
 hr {
 	height: 1px;
+	width: 100vw;
 	border: 0;
-	color: gray;
-	background-color: gray;
+	color: #000;
+	background-color: #000;
 	margin: 15px auto 10px auto;
 }
 
 img {
 	max-width: 100%;
 }
-button,
-textarea,
-input {
+button {
 	background-color: transparent;
 	border: none;
 	outline: none;
@@ -118,26 +117,14 @@ input {
 
 /*=============== KEYFRAMES ===============*/
 
-.collapse {
-	animation-name: collapse;
+/*====== CATEGORIES ======*/
+
+.expandLeft {
+	animation-name: expandLeft;
 	animation-duration: 0.45s;
 }
 
-@keyframes collapse {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(-100%);
-	}
-}
-
-.expand {
-	animation-name: expand;
-	animation-duration: 0.45s;
-}
-
-@keyframes expand {
+@keyframes expandLeft {
 	0% {
 		transform: translateX(-100%);
 	}
@@ -146,31 +133,17 @@ input {
 	}
 }
 
-.show {
-	animation-name: show;
+.collapseLeft {
+	animation-name: collapseLeft;
 	animation-duration: 0.45s;
 }
 
-@keyframes show {
+@keyframes collapseLeft {
 	0% {
-		opacity: 0;
+		transform: translateX(0);
 	}
 	100% {
-		opacity: 1;
-	}
-}
-
-.hide {
-	animation-name: hide;
-	animation-duration: 0.45s;
-}
-
-@keyframes hide {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
+		transform: translateX(-100%);
 	}
 }
 
@@ -276,20 +249,6 @@ input {
 	}
 }
 
-.subBack {
-	animation1-name: subBack;
-	animation-duration: 0.45s;
-}
-
-@keyframes subBack {
-	0% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(0%);
-	}
-}
-
 .subAway {
 	animation-name: subAway;
 	animation-duration: 0.45s;
@@ -304,17 +263,135 @@ input {
 	}
 }
 
-.subAway {
-	animation-name: subAway;
+/*====== LOGIN ======*/
+
+.expandRight {
+	animation-name: expandRight;
 	animation-duration: 0.45s;
 }
 
-@keyframes subAway {
+@keyframes expandRight {
 	0% {
-		transform: translateX(0%);
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+.collapseRight {
+	animation-name: collapseRight;
+	animation-duration: 0.45s;
+}
+
+@keyframes collapseRight {
+	0% {
+		transform: translateX(0);
 	}
 	100% {
 		transform: translateX(100%);
+	}
+}
+
+.collapseSignup {
+	animation-name: collapseSignup;
+	animation-duration: 0.45s;
+}
+
+@keyframes collapseSignup {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.expandSignup {
+	animation-name: expandSignup;
+	animation-duration: 0.45s;
+}
+
+@keyframes expandSignup {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.collapseSignin {
+	animation-name: collapseSignin;
+	animation-duration: 0.45s;
+}
+
+@keyframes collapseSignin {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.expandSignin {
+	animation-name: expandSignin;
+	animation-duration: 0.45s;
+}
+
+@keyframes expandSignin {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+.collapseIn {
+	animation-name: collapseIn;
+	animation-duration: 5s;
+}
+
+@keyframes collapseIn {
+	0% {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
+/*====== DUAL ======*/
+
+.show {
+	animation-name: show;
+	animation-duration: 0.45s;
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.hide {
+	animation-name: hide;
+	animation-duration: 0.45s;
+}
+
+@keyframes hide {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
 
@@ -331,6 +408,14 @@ input {
 .btn:hover {
 	background-color: #000;
 	color: #fff;
+}
+
+.closeBtn {
+	position: absolute;
+	color: #fff;
+	font-size: var(--h2-font-size);
+	cursor: pointer;
+	z-index: 100000;
 }
 
 /*=============== OVERLAY ===============*/
@@ -393,27 +478,57 @@ input {
 	top: 18px;
 }
 
-.ad {
-	position: absolute;
+.ad,
+.ad-categories {
 	display: flex;
-	top: -10px;
-	left: 20px;
 	width: 10px;
 	border-radius: 100%;
+}
+
+.ad {
+	position: absolute;
+	top: -10px;
+	left: 20px;
 	background-color: #000;
+}
+
+.ad-categories {
+	position: relative;
+	top: -10px;
+	left: 0%;
+	margin-left: 115px;
+	background-color: #fff;
 }
 
 /*=============== NAVBAR ===============*/
 
-#closeBtn {
-	position: absolute;
-	top: 7.5px;
+#categoriesNav {
+	left: 0;
+	transform: translateX(-100%);
+	transform-origin: left center;
+}
+
+#loginNav {
+	right: 0;
+	transform: translateX(100%);
+	transform-origin: right center;
+}
+
+#loginNav span {
+	position: relative;
+	top: 15px;
+	left: 77%;
+}
+
+#closeBtnCategories {
+	top: 5px;
 	left: 92%;
-	color: #fff;
-	font-size: var(--h4-font-size);
-	cursor: pointer;
+}
+
+#closeBtnLogin {
 	font-size: var(--h3-font-size);
-	z-index: 100000;
+	top: 19.5px;
+	left: 4.5%;
 }
 
 #subContainer1,
@@ -441,11 +556,8 @@ input {
 	position: fixed;
 	z-index: 100;
 	top: 0;
-	left: 0;
 	background-color: #fff;
-	transform-origin: left center;
 	z-index: 10000;
-	transform: translateX(-100%);
 }
 
 .sidenavHeader {
@@ -529,6 +641,113 @@ input {
 .sidenavContainerDrop hr {
 	width: 85%;
 	margin: auto 25%;
+}
+
+/*=============== LOGIN ===============*/
+
+.sidenavHeader .loginName {
+	color: #fff;
+}
+
+.loginName {
+	color: #000;
+	min-height: 100px;
+	z-index: 1000000;
+	margin-left: -10px;
+}
+
+.signup,
+.signin,
+.signupForm,
+.signinForm {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.signup,
+.signin {
+	height: 100vh;
+	align-items: center;
+	flex-direction: column;
+	padding: 1rem;
+	background-color: #fff;
+}
+
+.signin,
+.signinSuccess {
+	display: none;
+	position: absolute;
+}
+
+.signinSuccess {
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem;
+	padding-bottom: 0;
+	transform-origin: top right;
+}
+
+.signup p,
+.signin p {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.signup p a:hover,
+.signin p a:hover {
+	text-shadow: 0px 0px #000;
+}
+
+.signupForm,
+.signinForm,
+.signinSuccess {
+	justify-content: center;
+	max-width: 500px;
+	border-radius: 20px;
+	border: 2px solid #000;
+	padding: 1.5rem;
+}
+
+.signupForm label,
+.signinForm label {
+	display: flex;
+	width: 100%;
+	padding: 0.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.signupForm input,
+.signinForm input,
+#logout {
+	width: 100%;
+	margin-bottom: 2rem;
+	padding: 0.8rem;
+	border-radius: 9px;
+	border: 1px solid #000;
+}
+
+.submitForm,
+#logout {
+	cursor: pointer;
+	background-color: #000;
+	color: #fff;
+	margin-top: 2rem;
+	transition: 1s;
+}
+
+.submitForm:hover,
+#logout:hover {
+	box-shadow: 0 0 0 1px #000;
+}
+
+.signinSuccess p {
+	margin: 0.1rem;
+}
+
+#logout {
+	margin-top: 1rem;
 }
 
 /*=============== HOME ===============*/
@@ -961,6 +1180,7 @@ input {
 /* For medium devices */
 @media screen and (min-width: 640px) {
 	/*=============== NAV ===============*/
+
 	#login-ad {
 		display: flex;
 	}
@@ -1016,14 +1236,18 @@ input {
 	}
 
 	.ad {
-		top: -4px;
-		left: 45.5px;
+		top: -7px;
+		left: 55.5px;
 	}
 
 	/*=============== SIDENAV ===============*/
 
 	.sidenav {
 		width: 50%;
+	}
+
+	.loginName {
+		margin-left: 0px;
 	}
 
 	/*=============== HOME ===============*/

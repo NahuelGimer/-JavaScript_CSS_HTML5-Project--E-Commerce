@@ -53,13 +53,13 @@
 
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
-        <div id="overlay" onclick="closeNav()"></div>
+        <div id="overlay" onclick="closeCategories();closeLogin()"></div>
         <div class="nav container">
             <div class="nav-menu slider" id="nav-menu">
                 <ul class="nav__list">
 
                     <li class="nav__item">
-                        <div class="sidenav" id="sidenav">
+                        <div class="sidenav" id="categoriesNav">
                             <div class="sidenavContainerSub" id="subContainer1">
                                 <div class=" mainMenu" onclick="sub1()">
                                     <div class="sidenavHeader">
@@ -67,10 +67,10 @@
                                         <span>Main Menu</span>
                                     </div>
                                     <div class="sidenavContentHeader">Men</div>
-                                    <a href="#" onclick="closeNav()">
+                                    <a href="#" onclick="closeCategories()">
                                         <div class="sidenavContent">Air Force</div>
                                     </a>
-                                    <a href="#" onclick="closeNav()">
+                                    <a href="#" onclick="closeCategories()">
                                         <div class="sidenavContent">Dunk</div>
                                     </a>
                                 </div>
@@ -82,10 +82,10 @@
                                         <span>Main Menu</span>
                                     </div>
                                     <div class="sidenavContentHeader">Woman</div>
-                                    <a href="#" onclick="closeNav()">
+                                    <a href="#" onclick="closeCategories()">
                                         <div class="sidenavContent">Air Force</div>
                                     </a>
-                                    <a href="#" onclick="closeNav()">
+                                    <a href="#" onclick="closeCategories()">
                                         <div class="sidenavContent">Dunk</div>
                                     </a>
                                 </div>
@@ -97,10 +97,10 @@
                                         <span>Main Menu</span>
                                     </div>
                                     <div class="sidenavContentHeader">Boy</div>
-                                    <a href="#" onclick="closeNav()">
+                                    <a href="#" onclick="closeCategories()">
                                         <div class="sidenavContent">Air Force</div>
                                     </a>
-                                    <a href="#" onclick="closeNav()">
+                                    <a href="#" onclick="closeCategories()">
                                         <div class="sidenavContent">Dunk</div>
                                     </a>
                                 </div>
@@ -112,27 +112,27 @@
                                         <span>Main Menu</span>
                                     </div>
                                     <div class="sidenavContentHeader">Girl</div>
-                                    <a href="#" onclick="closeNav()">
+                                    <a href="#" onclick="closeCategories()">
                                         <div class="sidenavContent">Air Force</div>
                                     </a>
-                                    <a href="#" onclick="closeNav()">
+                                    <a href="#" onclick="closeCategories()">
                                         <div class="sidenavContent">Dunk</div>
                                     </a>
                                 </div>
                             </div>
 
-                            <div id="closeBtn" onclick="closeNav()">&times</div>
+                            <div class="closeBtn" id="closeBtnCategories" onclick="closeCategories()">&times</div>
 
                             <div id="mainContainer">
-                                <a href="#" class="sidenavHeader">
-                                    <i class="fas fa-user-circle"></i>
+                                <a href="#" class="sidenavHeader" onclick="loginNav(); loginCategories()">
                                     <span>Hello, Sign In</span>
+                                    <i class="ad-categories" id="categories-login-ad"></i>
                                 </a>
                                 <div class="sidenavContentHeader">Trending</div>
-                                <a href="#" onclick="closeNav()">
+                                <a href="#" onclick="closeCategories()">
                                     <div class="sidenavContent">Air Force</div>
                                 </a>
-                                <a href="#" onclick="closeNav()">
+                                <a href="#" onclick="closeCategories()">
                                     <div class="sidenavContent">Dunk</div>
                                 </a>
 
@@ -167,7 +167,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="header__action-btn" onclick="openNav();">
+                        <a href="#" class="header__action-btn" onclick="categoriesNav();">
                             <img src="assets/img/button.png" alt="Background Categories" class="nav__img1">
                             <span>categories</span>
                         </a>
@@ -180,7 +180,56 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn" onclick="ad()">
+                        <div class="sidenav" id="loginNav">
+                            <div class="sidenavContainer">
+                                <div class="mainMenu">
+                                    <div class="sidenavHeader">
+                                        <div class="closeBtn" id="closeBtnLogin" onclick="closeLogin()">&times</div>
+                                        <a href="#" class="loginName" onclick="closeLogin()"> <span>Login</span></a>
+                                    </div>
+                                    <div class="login">
+                                        <div class="signup" id="signup">
+                                            <form class="signupForm" id="signupForm">
+                                                <label>Name</label>
+                                                <input type="text" maxlength="20" placeholder=" abc" id="signupName"
+                                                    onkeydown="return /[0-9a-zA-Z]/i.test(event.key)"
+                                                    onpaste="return false;" ondrop="return false;" required autofocus>
+                                                <label>Mail</label>
+                                                <input type="email" placeholder="abc@abc.com" id="signupEmail" required>
+                                                <label>Password</label>
+                                                <input type="password" placeholder="abc123" id="signupPassword"
+                                                    required>
+                                                <p id="signupFormStatus"></p>
+                                                <input type="button" class="submitForm" value="Sign Up"
+                                                    id="signupSubmit" id="signupSubmit" onclick="signup()">
+                                            </form>
+                                            <p>Already have an account? <a href="#" onclick="signinForm()">Sign In</a>
+                                            </p>
+                                        </div>
+                                        <div class="signin" id="signin">
+                                            <form class="signinForm" id="signinForm">
+                                                <label>Mail</label>
+                                                <input type="email" placeholder="abc@abc.com" id="signinEmail" required
+                                                    autofocus>
+                                                <label>Password</label>
+                                                <input type="password" placeholder="abc123" id="signinPassword"
+                                                    required>
+                                                <p id="signinFormStatus"></p>
+                                                <input type="button" class="submitForm" value="Sign In"
+                                                    id="signinSubmit" onclick="signin()">
+
+                                            </form>
+                                            <p>Don't have an account? <a href="#" onclick="signinForm()">Sign Up</a></p>
+                                        </div>
+                                        <div class="signinSuccess" id="signinSuccess">
+                                            <p id="signinSuccessName"></p>
+                                            <button id="logout" onclick="logout()">Logout</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="header__action-btn" onclick="loginNav(); ad()">
                             <img src="assets/img/button.png" alt="Background Login" class="nav__img2">
                             <span>login</span>
                             <i class="ad" id="login-ad"></i>
@@ -191,7 +240,7 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn" onclick="openNav(); ad()">
+                        <a href="#" class="header__action-btn" onclick="categoriesNav(); ad()">
                             <i class="fi fi-br-menu-burger"></i>
                             <i class="ad" id="categories-ad"></i>
                         </a>
