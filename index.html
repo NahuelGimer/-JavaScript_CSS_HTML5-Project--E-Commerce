@@ -125,8 +125,7 @@
 
                             <div id="mainContainer">
                                 <a href="#" class="sidenavHeader" onclick="loginNav(); loginCategories()">
-                                    <span>Hello, Sign In</span>
-                                    <i class="ad-categories" id="categories-login-ad"></i>
+                                    <span id="sidenavHello">Hello, Sign In.</span>
                                 </a>
                                 <div class="sidenavContentHeader">Trending</div>
                                 <a href="#" onclick="closeCategories()">
@@ -168,7 +167,6 @@
                         </div>
 
                         <a href="#" class="header__action-btn" onclick="categoriesNav();">
-                            <img src="assets/img/button.png" alt="Background Categories" class="nav__img1">
                             <span>categories</span>
                         </a>
                     </li>
@@ -185,7 +183,8 @@
                                 <div class="mainMenu">
                                     <div class="sidenavHeader">
                                         <div class="closeBtn" id="closeBtnLogin" onclick="closeLogin()">&times</div>
-                                        <a href="#" class="loginName" onclick="closeLogin()"> <span>Login</span></a>
+                                        <a href="#" class="loginName" onclick="closeLogin()"> <span
+                                                id="loginMenu">Login</span></a>
                                     </div>
                                     <div class="login">
                                         <div class="signup" id="signup">
@@ -223,15 +222,21 @@
                                         </div>
                                         <div class="signinSuccess" id="signinSuccess">
                                             <p id="signinSuccessName"></p>
-                                            <button id="logout" onclick="logout()">Logout</button>
+                                            <div class="signinSuccessDiv">
+                                                <button class="signinSuccessButton">Wishlist</button>
+                                                <button class="signinSuccessButton">Cart</button>
+                                            </div>
+
+                                            <button class="signinSuccessButton" id="logout"
+                                                onclick="logout()">Logout</button>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <a href="#" class="header__action-btn" onclick="loginNav(); ad()">
-                            <img src="assets/img/button.png" alt="Background Login" class="nav__img2">
-                            <span>login</span>
+                            <span id="loginTitle">login</span>
                             <i class="ad" id="login-ad"></i>
                         </a>
                     </li>

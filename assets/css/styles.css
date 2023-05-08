@@ -458,10 +458,7 @@ button {
 	top: 5px;
 }
 
-.nav__item .header__action-btn span,
-.nav__img,
-.nav__img1,
-.nav__img2 {
+.nav__item .header__action-btn span {
 	display: none;
 }
 
@@ -478,26 +475,14 @@ button {
 	top: 18px;
 }
 
-.ad,
-.ad-categories {
+.ad {
 	display: flex;
 	width: 10px;
 	border-radius: 100%;
-}
-
-.ad {
 	position: absolute;
 	top: -10px;
 	left: 20px;
 	background-color: #000;
-}
-
-.ad-categories {
-	position: relative;
-	top: -10px;
-	left: 0%;
-	margin-left: 115px;
-	background-color: #fff;
 }
 
 /*=============== NAVBAR ===============*/
@@ -720,7 +705,7 @@ button {
 
 .signupForm input,
 .signinForm input,
-#logout {
+.signinSuccessButton {
 	width: 100%;
 	margin-bottom: 2rem;
 	padding: 0.8rem;
@@ -729,7 +714,7 @@ button {
 }
 
 .submitForm,
-#logout {
+.signinSuccessButton {
 	cursor: pointer;
 	background-color: #000;
 	color: #fff;
@@ -738,7 +723,7 @@ button {
 }
 
 .submitForm:hover,
-#logout:hover {
+.signinSuccessButton:hover {
 	box-shadow: 0 0 0 1px #000;
 }
 
@@ -746,10 +731,14 @@ button {
 	margin: 0.1rem;
 }
 
-#logout {
+.signinSuccess div {
+	display: flex;
 	margin-top: 1rem;
 }
 
+.signinSuccess div button {
+	margin: 1rem;
+}
 /*=============== HOME ===============*/
 
 .home {
@@ -1212,29 +1201,6 @@ button {
 		display: none;
 	}
 
-	.nav__img1,
-	.nav__img2 {
-		position: absolute;
-		min-width: 140px;
-		height: 30px;
-		z-index: -20px;
-	}
-
-	.nav__img1,
-	.nav__img2 {
-		top: -2px;
-		min-height: 40px;
-	}
-
-	.nav__img1 {
-		left: -40px;
-		min-width: 205px;
-	}
-	.nav__img2 {
-		left: -27.5px;
-		min-width: 100px;
-	}
-
 	.ad {
 		top: -7px;
 		left: 55.5px;
@@ -1345,33 +1311,11 @@ button {
 		font-size: var(--h4-font-size);
 		top: 0px;
 	}
-	.nav__img1,
-	.nav__img2 {
-		top: -5px;
-	}
-
-	.nav__img1 {
-		left: -35px;
-		min-width: 205px;
-	}
-	.nav__img2 {
-		left: -20px;
-		min-width: 100px;
-	}
-
-	.nav__item:hover .nav__img,
-	.nav__item:hover .nav__img1,
-	.nav__item:hover .nav__img2 {
-		display: flex;
-	}
 
 	.nav__item:hover .header__action-btn span {
 		position: relative;
-		color: #fff;
-	}
-
-	.nav__item:hover .ad {
-		background-color: #fff;
+		transition: 1s;
+		text-shadow: 0px 0px 0px #000;
 	}
 
 	.ad {
