@@ -1322,7 +1322,7 @@ expandFullCart {
 	.nav__item .header__action-btn span {
 		display: flex;
 		position: relative;
-		top: 5px;
+		top: 7.5px;
 		font-weight: var(--weight-600);
 		font-size: var(--large-font-size);
 		font-family: "Bruno Ace SC", cursive;
@@ -1333,7 +1333,7 @@ expandFullCart {
 	}
 
 	.ad {
-		top: -7px;
+		top: 2px;
 		left: 55.5px;
 	}
 
@@ -1446,7 +1446,7 @@ expandFullCart {
 	}
 
 	.ad {
-		top: -2px;
+		top: 0px;
 		left: 65.5px;
 	}
 
