@@ -166,8 +166,10 @@
                             </div>
                         </div>
 
-                        <a href="#" class="header__action-btn" onclick="categoriesNav();">
+                        <a href="#" class="header__action-btn" onclick="categoriesNav(); ad()">
                             <span>categories</span>
+                            <i class="fi fi-rr-menu-burger"></i>
+                            <i class="ad" id="categories-ad"></i>
                         </a>
                     </li>
 
@@ -221,15 +223,11 @@
                                             <p>Don't have an account? <a href="#" onclick="signinForm()">Sign Up</a></p>
                                         </div>
                                         <div class="signinSuccess" id="signinSuccess">
-                                            <p id="signinSuccessName"></p>
-                                            <div class="signinSuccessDiv">
-                                                <button class="signinSuccessButton">Wishlist</button>
-                                                <button class="signinSuccessButton">Cart</button>
+                                            <div class="signinSuccessDivisor">
+                                                <p id="signinSuccessName"></p>
+                                                <button class="signinSuccessButton" id="logout"
+                                                    onclick="logout()">Logout</button>
                                             </div>
-
-                                            <button class="signinSuccessButton" id="logout"
-                                                onclick="logout()">Logout</button>
-
                                         </div>
                                     </div>
                                 </div>
@@ -237,7 +235,18 @@
                         </div>
                         <a href="#" class="header__action-btn" onclick="loginNav(); ad()">
                             <span id="loginTitle">login</span>
+                            <i class="fi fi-rs-user"></i>
                             <i class="ad" id="login-ad"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="header__action-btn">
+                            <span id="cartTitle">cart</span>
                         </a>
                     </li>
                 </ul>
@@ -245,9 +254,8 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn" onclick="categoriesNav(); ad()">
-                            <i class="fi fi-br-menu-burger"></i>
-                            <i class="ad" id="categories-ad"></i>
+                        <a href="#" class="header__action-btn">
+                            <span id="wishlistTitle">wishlist</span>
                         </a>
                     </li>
                 </ul>
