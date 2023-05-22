@@ -31,6 +31,8 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
+
+
     <!--==================== CSS ====================-->
 
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -46,14 +48,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Yanone+Kaffeesatz:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
-        <div id="overlay" onclick="closeCategories();closeLogin()"></div>
+        <div id="overlay" onclick="closeCategories();closeLogin();closeWishlist();closeCart()"></div>
         <div class="nav container">
             <div class="nav-menu slider" id="nav-menu">
                 <ul class="nav__list">
@@ -166,7 +170,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="header__action-btn" onclick="categoriesNav(); ad()">
+                        <a href="#" class="header__action-btn" onclick="categoriesNav()">
                             <span>categories</span>
                             <i class="fi fi-rr-menu-burger"></i>
                         </a>
@@ -184,7 +188,7 @@
                                 <div class="mainMenu">
                                     <div class="sidenavHeader">
                                         <div class="closeBtn" id="closeBtnLogin" onclick="closeLogin()">&times</div>
-                                        <a href="#" class="loginName" onclick="closeLogin()"> <span
+                                        <a href="#" class="sidenavName" onclick="closeLogin()"> <span
                                                 id="loginMenu">Login</span></a>
                                     </div>
                                     <div class="login">
@@ -226,18 +230,22 @@
                                                 <p id="signinSuccessName"></p>
                                                 <button class="signinSuccessButton" id="logout"
                                                     onclick="logout()">Logout</button>
-                                            </div>
+                                                <div class="signinSuccessButtons"><button
+                                                        class="signinSuccessButton text" id="signinWishlist"
+                                                        onclick="closeLogin(); wishlistNav()">Wishlist</button>
+                                                    <button class="signinSuccessButton text" id="signinCart"
+                                                        onclick="closeLogin(); cartNav()">Cart</button>
+                                                </div>
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="header__action-btn" onclick="loginNav(); ad()">
+                        <a href="#" class="header__action-btn" onclick="loginNav()">
                             <span id="loginTitle">login</span>
-                            <i class="ad" id="categories-ad"></i>
                             <i class="fi fi-rs-user"></i>
-                            <i class="ad" id="login-ad"></i>
                         </a>
                     </li>
                 </ul>
@@ -246,8 +254,88 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn">
-                            <span id="cartTitle">cart</span>
+                        <div class="sidenav" id="wishlistNav">
+                            <div class="sidenavContainer">
+                                <div class="mainMenu">
+                                    <div class="sidenavHeader">
+                                        <div class="closeBtn" id="closeBtnWishlist" onclick="closeWishlist()">&times
+                                        </div>
+                                        <a href="#" class="sidenavName" onclick="closeWishlist()"> <span
+                                                id="wishlistMenu">Wishlist</span></a>
+                                    </div>
+                                    <div class="sidenavCart">
+                                        <div class="sidenavWishlistProduct" id="sidenavWishlistProduct1">
+                                            <div class="sidenavWishlistProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-1.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription sidenavWishlistDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Uno</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew">$236.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                </div>
+                                                <div class="sidenavWishlistDescriptionFull">
+                                                    <span>Full</span>
+                                                    <i class="fi fi-rr-bolt"></i>
+                                                </div>
+                                                <i class="fi fi-ss-heart sidenavWishlistEliminate"
+                                                    onclick="wishlistTrash1();"></i>
+                                            </div>
+                                        </div>
+                                        <div class="sidenavWishlistProduct" id="sidenavWishlistProduct2">
+                                            <div class="sidenavWishlistProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-2.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription sidenavWishlistDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Dos</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew">$237.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                </div>
+
+                                                <i class="fi fi-ss-heart sidenavWishlistEliminate"
+                                                    onclick="wishlistTrash2();"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="sidenavWishlistProduct" id="sidenavWishlistProduct3">
+                                            <div class="sidenavWishlistProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-8.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription sidenavWishlistDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Tres</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew">$238.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+
+                                                </div>
+                                                <div class="sidenavWishlistDescriptionFull">
+                                                    <span>Full</span>
+                                                    <i class="fi fi-rr-bolt"></i>
+                                                </div>
+                                                <i class="fi fi-ss-heart sidenavWishlistEliminate"
+                                                    onclick="wishlistTrash3();"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="header__action-btn" onclick="wishlistNav()">
+                            <span id="wishlistTitle">wishlist</span>
+                            <i class="fi fi-rs-heart"></i>
+                            <div class="ad ad-wishlist" id="ad-wishlist"></div>
+
                         </a>
                     </li>
                 </ul>
@@ -255,8 +343,129 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="header__action-btn">
-                            <span id="wishlistTitle">wishlist</span>
+                        <div class="sidenav" id="cartNav">
+                            <div class="sidenavContainer">
+                                <div class="mainMenu">
+                                    <div class="sidenavHeader">
+                                        <div class="closeBtn" id="closeBtnCart" onclick="closeCart()">&times
+                                        </div>
+                                        <a href="#" class="sidenavName" onclick="closeCart()"> <span
+                                                id="cartMenu">Cart</span></a>
+                                    </div>
+                                    <div class="sidenavCart">
+                                        <div class="sidenavCartProduct" id="sidenavCartProduct1">
+                                            <div class="sidenavCartProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-1.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Uno</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew"
+                                                            id="sidenavCartDescriptionPriceNew1">$236.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                    <input class="sidenavCartDescriptionQuantity" type="number"
+                                                        value="0" min="1" max="10" onKeyDown="return false"
+                                                        id="sidenavCartDescriptionQuantity1"
+                                                        onclick="cartTotal1(); cartTotal()">
+                                                    <sup>u</sup>
+
+                                                </div>
+                                                <div class="sidenavDescriptionSubtotal">
+                                                    <span class="sidenavDescriptionSubtotalText">Subtotal: </span>
+                                                    <span class="sidenavDescriptionSubtotalPrice"
+                                                        id="sidenavDescriptionSubtotalPrice1"></span>
+                                                </div>
+                                                <div class="sidenavCartDescriptionFull">
+                                                    <span>Full</span>
+                                                    <i class="fi fi-rr-bolt"></i>
+                                                </div>
+                                                <i class="fi fi-rr-trash sidenavCartEliminate"
+                                                    onclick="cartTrash1(); cartTotal()"></i>
+                                            </div>
+                                        </div>
+                                        <div class="sidenavCartProduct" id="sidenavCartProduct2">
+                                            <div class="sidenavCartProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-2.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Dos</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew"
+                                                            id="sidenavCartDescriptionPriceNew2">$237.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                    <input class="sidenavCartDescriptionQuantity" type="number"
+                                                        value="0" min="1" max="10" onKeyDown="return false"
+                                                        id="sidenavCartDescriptionQuantity2"
+                                                        onclick="cartTotal2(); cartTotal()">
+                                                    <sup>u</sup>
+                                                </div>
+                                                <div class="sidenavDescriptionSubtotal">
+                                                    <span class="sidenavDescriptionSubtotalText">Subtotal: </span>
+                                                    <span class="sidenavDescriptionSubtotalPrice"
+                                                        id="sidenavDescriptionSubtotalPrice2"></span>
+                                                </div>
+                                                <i class="fi fi-rr-trash sidenavCartEliminate"
+                                                    onclick="cartTrash2(); cartTotal()"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="sidenavCartProduct" id="sidenavCartProduct3">
+                                            <div class="sidenavCartProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-8.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Tres</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew"
+                                                            id="sidenavCartDescriptionPriceNew3">$238.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                    <input class="sidenavCartDescriptionQuantity" type="number"
+                                                        value="0" min="1" max="10" onKeyDown="return false"
+                                                        id="sidenavCartDescriptionQuantity3"
+                                                        onclick="cartTotal3(); cartTotal()">
+                                                    <sup>u</sup>
+
+                                                </div>
+                                                <div class="sidenavDescriptionSubtotal">
+                                                    <span class="sidenavDescriptionSubtotalText">Subtotal:</span>
+                                                    <span class="sidenavDescriptionSubtotalPrice"
+                                                        id="sidenavDescriptionSubtotalPrice3"></span>
+                                                </div>
+
+                                                <div class="sidenavCartDescriptionFull">
+                                                    <span>Full</span>
+                                                    <i class="fi fi-rr-bolt"></i>
+                                                </div>
+                                                <i class="fi fi-rr-trash sidenavCartEliminate"
+                                                    onclick="cartTrash3(); cartTotal()"></i>
+                                            </div>
+                                        </div>
+                                        <div class="sidenavCartBuy">
+                                            <span class="sidenavCartBuyTotal">Total:</span>
+                                            <span class="sidenavCartBuyTotalPrice"
+                                                id="sidenavCartBuyTotalPrice">$0</span>
+                                        </div>
+
+                                        <a href="#" class="sidenavCartBuyTotalPriceButton">
+                                            <span>Buy</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href=" #" class="header__action-btn" onclick="cartNav()">
+                            <span id="cartTitle">cart</span>
+                            <i class="fi fi-rs-shopping-cart"></i>
+                            <div class="ad ad-cart" id="ad-cart"></div>
+
                         </a>
                     </li>
                 </ul>
@@ -359,7 +568,7 @@
                                 </a>
                                 <div class="product__price flex">
                                     <del class="old__price">$245.8</del>
-                                    <span class="new__price">$238.85</span>
+                                    <span class="new__price">$236.85</span>
                                 </div>
                                 <div class="full">
                                     <i class="fi fi-rr-bolt"></i>
@@ -394,7 +603,7 @@
 
                                 <div class="product__price flex">
                                     <del class="old__price">$245.8</del>
-                                    <span class="new__price">$238.85</span>
+                                    <span class="new__price">$237.85</span>
                                 </div>
 
                             </div>
@@ -403,7 +612,7 @@
                         <li class="product__item product__item-3">
                             <div class="product__banner">
                                 <a href="#" class="product__images">
-                                    <img src="assets/img/product-3.jpg" alt="Ecommerce Shoes"
+                                    <img src="assets/img/product-8.jpg" alt="Ecommerce Shoes"
                                         class="product__img default">
                                 </a>
                                 <div class="product__action1">
@@ -417,7 +626,6 @@
                                     </button>
                                 </div>
 
-
                             </div>
                             <div class="product__content">
                                 <a href="#">
@@ -430,162 +638,6 @@
                                 <div class="full">
                                     <i class="fi fi-rr-bolt"></i>
                                     <span>Full</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="product__item product__item-4">
-                            <div class="product__banner">
-                                <a href="#" class="product__images">
-                                    <img src="assets/img/product-4.jpg" alt="Ecommerce Shoes"
-                                        class="product__img default">
-                                </a>
-                                <div class="product__action1">
-                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart4()">
-                                        <i class="fi fi-rs-heart heart" id="heart4"></i>
-                                    </button>
-                                </div>
-                                <div class="product__action2">
-                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart4()">
-                                        <i class="fi fi-rs-shopping-cart cart" id="cart4"></i>
-                                    </button>
-                                </div>
-
-                            </div>
-                            <div class="product__content">
-                                <a href="#">
-                                </a>
-
-                                <div class="product__price flex">
-                                    <del class="old__price">$245.8</del>
-                                    <span class="new__price">$238.85</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="product__item product__item-5">
-                            <div class="product__banner">
-                                <a href="#" class="product__images">
-                                    <img src="assets/img/product-5.jpg" alt="Ecommerce Shoes"
-                                        class="product__img default">
-                                </a>
-                                <div class="product__action1">
-                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart5()">
-                                        <i class="fi fi-rs-heart heart" id="heart5"></i>
-                                    </button>
-                                </div>
-                                <div class="product__action2">
-                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart5()">
-                                        <i class="fi fi-rs-shopping-cart cart" id="cart5"></i>
-                                    </button>
-                                </div>
-
-
-                            </div>
-                            <div class="product__content">
-                                <a href="#">
-                                </a>
-
-                                <div class="product__price flex">
-                                    <del class="old__price">$245.8</del>
-                                    <span class="new__price">$238.85</span>
-                                </div>
-                                <div class="full">
-                                    <i class="fi fi-rr-bolt"></i>
-                                    <span>Full</span>
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li class="product__item product__item-6">
-                            <div class="product__banner">
-                                <a href="#" class="product__images">
-                                    <img src="assets/img/product-6.jpg" alt="Ecommerce Shoes"
-                                        class="product__img default">
-                                </a>
-                                <div class="product__action1">
-                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart6()">
-                                        <i class="fi fi-rs-heart heart" id="heart6"></i>
-                                    </button>
-                                </div>
-                                <div class="product__action2">
-                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart6()">
-                                        <i class="fi fi-rs-shopping-cart cart" id="cart6"></i>
-                                    </button>
-                                </div>
-
-
-                            </div>
-                            <div class="product__content">
-                                <a href="#">
-                                </a>
-
-                                <div class="product__price flex">
-                                    <del class="old__price">$245.8</del>
-                                    <span class="new__price">$238.85</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="product__item product__item-7">
-                            <div class="product__banner">
-                                <a href="#" class="product__images">
-                                    <img src="assets/img/product-7.jpg" alt="Ecommerce Shoes"
-                                        class="product__img default">
-                                </a>
-                                <div class="product__action1">
-                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart7()">
-                                        <i class="fi fi-rs-heart heart" id="heart7"></i>
-                                    </button>
-                                </div>
-                                <div class="product__action2">
-                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart7()">
-                                        <i class="fi fi-rs-shopping-cart cart" id="cart7"></i>
-                                    </button>
-                                </div>
-
-                            </div>
-                            <div class="product__content">
-                                <a href="#">
-                                </a>
-
-                                <div class="product__price flex">
-                                    <del class="old__price">$245.8</del>
-                                    <span class="new__price">$238.85</span>
-                                </div>
-                                <div class="full">
-                                    <i class="fi fi-rr-bolt"></i>
-                                    <span>Full</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="product__item product__item-8">
-                            <div class="product__banner">
-                                <a href="#" class="product__images">
-                                    <img src="assets/img/product-8.jpg" alt="Ecommerce Shoes"
-                                        class="product__img default">
-                                </a>
-                                <div class="product__action1">
-                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart8()">
-                                        <i class="fi fi-rs-heart heart" id="heart8"></i>
-                                    </button>
-                                </div>
-                                <div class="product__action2">
-                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart8()">
-                                        <i class="fi fi-rs-shopping-cart cart" id="cart8"></i>
-                                    </button>
-                                </div>
-
-                            </div>
-                            <div class="product__content">
-                                <a href="#">
-                                </a>
-
-                                <div class="product__price flex">
-                                    <del class="old__price">$245.8</del>
-                                    <span class="new__price">$238.85</span>
                                 </div>
                             </div>
                         </li>
@@ -596,11 +648,6 @@
                     <!-- Add Pagination -->
                     <ul class="slider-indicators">
                         <li class="active"></li>
-                        <li class=""></li>
-                        <li class=""></li>
-                        <li class=""></li>
-                        <li class=""></li>
-                        <li class=""></li>
                         <li class=""></li>
                         <li class=""></li>
                     </ul>

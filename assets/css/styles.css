@@ -95,6 +95,14 @@ button {
 	outline: none;
 }
 
+input[type="number"] {
+	max-width: 3.5rem;
+	font-size: var(--h4-font-size);
+	border: none;
+	text-decoration: none;
+	-webkit-appearance: none;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 
 .section {
@@ -113,6 +121,14 @@ button {
 .rotateAgain {
 	transition: transform 0.5s;
 	transform: rotate(-360deg);
+}
+
+.ad {
+	height: 10px;
+	width: 10px;
+	background-color: #000;
+	position: absolute;
+	border-radius: 5000px;
 }
 
 /*=============== KEYFRAMES ===============*/
@@ -545,32 +561,30 @@ expandFullCart {
 }
 
 .nav__logo-img {
-	position: relative;
+	position: absolute;
 	width: 100px;
-	top: -37.5px;
+	top: 0px;
+	left: 0;
+	margin: -15px 0 0 5px;
 }
 
-.nav__item:first-child,
-.nav__item:nth-child(2n),
-.nav__item:nth-child(3n) {
-	display: flex;
-	position: absolute;
+.nav__item {
 	font-size: var(--h4-font-size);
+	top: 20px;
 }
 
 .nav__item:first-child {
-	top: 5%;
-	right: 15%;
-}
-
-.nav__item:nth-child(2n) {
-	top: 2.75%;
-	left: 5%;
+	position: relative;
+	right: 50%;
+	top: 15px;
+	left: -5px;
 }
 
 .nav__item:nth-child(3n) {
-	top: 4.7%;
-	right: 5%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 40px 25px 0 0px;
 }
 
 .ad {
@@ -590,16 +604,20 @@ expandFullCart {
 	transform-origin: left center;
 }
 
-#loginNav {
+#loginNav,
+#wishlistNav,
+#cartNav {
 	right: 0;
 	transform: translateX(100%);
 	transform-origin: right center;
 }
 
-#loginNav span {
+#loginNav span,
+#wishlistNav span,
+#cartNav span {
 	position: relative;
 	top: 15px;
-	left: 77%;
+	margin-right: -40px;
 }
 
 #closeBtnCategories {
@@ -607,7 +625,9 @@ expandFullCart {
 	left: 92%;
 }
 
-#closeBtnLogin {
+#closeBtnLogin,
+#closeBtnWishlist,
+#closeBtnCart {
 	font-size: var(--h3-font-size);
 	top: 19.5px;
 	left: 4.5%;
@@ -640,6 +660,7 @@ expandFullCart {
 	top: 0;
 	background-color: #fff;
 	z-index: 10000;
+	overflow-y: auto;
 }
 
 .sidenavHeader {
@@ -664,8 +685,9 @@ expandFullCart {
 
 .sidenavContentHeader {
 	padding: 15px 0 15px 25px;
-	font-size: var(--large-font-size);
+	font-size: var(--h4-font-size);
 	font-weight: var(--weight-600);
+	font-family: "Roboto Condensed", sans-serif;
 }
 
 .sidenavContent {
@@ -696,26 +718,26 @@ expandFullCart {
 	background-color: #fff;
 	transform: translate(0%);
 }
-.mainMenu:hover {
+.sidenavHeader:hover {
 	cursor: pointer;
 }
 
-.mainMenu i,
-.mainMenu span {
+.sidenavHeader i,
+.sidenavHeader span {
 	position: relative;
 	color: #fff;
 }
 
-.mainMenu i {
+.sidenavHeader i {
 	top: 15px;
 	right: 7.5px;
 }
 
-.mainMenu span {
-	top: 12.5px;
+.sidenavHeader span {
+	top: 15.5px;
 }
 
-.nav__item:hover .mainMenu i {
+.nav__item:hover .sidenavHeader i {
 	position: relative;
 	color: #fff;
 }
@@ -727,11 +749,11 @@ expandFullCart {
 
 /*=============== LOGIN ===============*/
 
-.sidenavHeader .loginName {
+.sidenavHeader .sidenavName {
 	color: #fff;
 }
 
-.loginName {
+.sidenavName {
 	color: #000;
 	position: absolute;
 	right: 80px;
@@ -752,6 +774,7 @@ expandFullCart {
 	align-items: center;
 	flex-direction: column;
 	padding: 1rem;
+	font-family: "Roboto Condensed", sans-serif;
 	background-color: #fff;
 }
 
@@ -775,6 +798,7 @@ expandFullCart {
 .signin p {
 	margin-top: 2rem;
 	text-align: center;
+	font-family: inherit;
 }
 
 .signup p a:hover,
@@ -817,6 +841,8 @@ expandFullCart {
 	margin-bottom: 2rem;
 	padding: 0.8rem;
 	border-radius: 9px;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: var(--large-font-size);
 	border: 1px solid #000;
 }
 
@@ -827,6 +853,7 @@ expandFullCart {
 	color: #fff;
 	margin-top: 2rem;
 	transition: 1s;
+	font-size: var(--large-font-size);
 }
 
 .submitForm:hover,
@@ -836,7 +863,257 @@ expandFullCart {
 
 .signinSuccess p {
 	margin: 0.1rem;
+	font-family: "Roboto Condensed", sans-serif;
 }
+
+.signinSuccessButtons {
+	display: flex;
+}
+
+.signinSuccessButtons .signinSuccessButton {
+	width: 50%;
+	margin: 10px;
+}
+
+/*=============== CART ===============*/
+
+.ad-cart {
+	left: 25px;
+}
+
+.sidenavCart {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidenavCartProduct {
+	display: none;
+	width: 100%;
+	border-bottom: 3px solid #000;
+}
+
+.sidenavCartProductDiv {
+	font-family: "Roboto Condensed", sans-serif;
+	margin-top: 25px;
+	margin-bottom: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidenavCartImage {
+	width: 150px;
+}
+
+.sidenavCartDescription {
+	position: relative;
+	left: 40px;
+}
+
+.sidenavCartDescription span {
+	width: 100px;
+	font-size: var(--h4-font-size);
+	color: #000;
+}
+
+.sidenavCartDescriptionTitle {
+	left: 25px;
+}
+
+.sidenavCartDescriptionFull {
+	display: flex;
+	position: relative;
+	right: 70px;
+	top: 45px;
+}
+
+.sidenavCartDescriptionFull i,
+.sidenavCartDescriptionFull span {
+	color: #008000;
+	font-size: var(--large-font-size);
+}
+
+.sidenavCartDescriptionFull i {
+	position: relative;
+	top: 17px;
+	right: 5px;
+}
+
+.sidenavCartDescriptionPrice {
+	display: flex;
+	flex-direction: row;
+}
+
+.sidenavCartDescriptionPrice span {
+	font-size: var(--h4-font-size);
+	margin-top: 25px;
+}
+
+.sidenavCartDescriptionPrice span:nth-child(2n) {
+	margin-left: 20px;
+	text-decoration: line-through;
+}
+
+.sidenavCartDescriptionQuantity {
+	margin-top: 40px;
+}
+
+.sidenavCartDescriptionQuantity + sup {
+	position: relative;
+	top: 9px;
+	right: 35px;
+}
+
+.sidenavCartEliminate {
+	position: relative;
+	top: 62px;
+	right: 25px;
+	cursor: pointer;
+}
+
+.sidenavCartEliminate:hover {
+	color: #ff0000;
+	cursor: pointer;
+}
+
+.sidenavCartProductDivisor {
+	display: block;
+	height: 5px;
+	width: 100%;
+	background-color: #000;
+}
+
+.sidenavDescriptionSubtotal {
+	width: 50px;
+	display: flex;
+	position: relative;
+	bottom: -85px;
+	right: 300px;
+}
+
+.sidenavDescriptionSubtotalPrice {
+	position: absolute;
+	left: 45px;
+}
+
+.sidenavCartBuy {
+	display: flex;
+	position: relative;
+	right: 180px;
+}
+
+.sidenavCartBuyTotal {
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.sidenavCartBuyTotalPrice {
+	position: relative;
+	font-family: "Roboto Condensed", sans-serif;
+	right: -45px;
+}
+
+.sidenavCartBuyTotalPriceButton {
+	text-align: center;
+	width: 25%;
+	margin-bottom: 2rem;
+	padding: 0.8rem;
+	border-radius: 9px;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: var(--large-font-size);
+	border: 1px solid #000;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	top: 20px;
+	background-color: #000;
+}
+
+.sidenavCartBuyTotalPriceButton span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	transform: translate(0%, -75%);
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.sidenavCartBuyTotalPriceButton:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+.sidenavCartBuyTotalPriceButton:hover span {
+	color: #000;
+}
+
+/*=============== WISHLIST ===============*/
+
+.ad-wishlist {
+	display: none;
+	top: -10px;
+	left: 25px;
+}
+
+.sidenavWishlist {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidenavWishlistProduct {
+	display: none;
+	width: 100%;
+	border-bottom: 3px solid #000;
+	margin-top: 30px;
+}
+
+.sidenavWishlistProductDiv {
+	font-family: "Roboto Condensed", sans-serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidenavWishlistDescription {
+	margin-top: -120px;
+}
+
+.sidenavWishlistDescriptionFull {
+	position: relative;
+	display: flex;
+	top: 40px;
+	right: 100px;
+	color: #008000;
+}
+
+.sidenavWishlistDescriptionFull i {
+	margin-left: -15px;
+	margin-top: 5px;
+}
+
+.sidenavWishlistDescriptionFull span {
+	line-height: 0px;
+	font-size: 1.3rem;
+}
+
+.sidenavWishlistEliminate {
+	position: relative;
+	top: 40px;
+	right: 35px;
+	cursor: pointer;
+}
+
+.sidenavWishlistEliminate:hover {
+	color: #ff0000;
+}
+
 /*=============== HOME ===============*/
 
 .home {
@@ -1281,6 +1558,14 @@ expandFullCart {
 		flex-direction: row;
 	}
 
+	.nav__logo-img {
+		position: relative;
+		width: 100px;
+		top: -35px;
+		right: 10px;
+		margin: 0;
+	}
+
 	.nav__item:first-child,
 	.nav__item:nth-child(2n),
 	.nav__item:nth-child(3n) {
@@ -1304,6 +1589,7 @@ expandFullCart {
 	.nav__item:first-child {
 		order: 2;
 		margin-left: 10px;
+		right: 20px;
 	}
 
 	.nav__item:nth-child(3n) {
@@ -1311,12 +1597,6 @@ expandFullCart {
 		margin-right: 30px;
 		right: 0px;
 		margin-top: 23.5px;
-	}
-
-	.nav__logo-img {
-		top: -40px;
-		right: 20px;
-		width: 100px;
 	}
 
 	.nav__item .header__action-btn span {
@@ -1339,14 +1619,17 @@ expandFullCart {
 
 	/*=============== SIDENAV ===============*/
 
-	.loginName {
+	.sidenavName {
 		right: 90px;
 	}
 
-	.sidenav {
-		width: 50%;
+	.sidenav:nth-child(1n) {
+		width: 60%;
 	}
 
+	.ad-wishlist {
+		left: 88px;
+	}
 	/*=============== HOME ===============*/
 
 	.home__info {
@@ -1431,7 +1714,7 @@ expandFullCart {
 
 	.nav__logo-img {
 		width: 125px;
-		margin-top: -7.5px;
+		margin-top: -10px;
 	}
 
 	.nav__item .header__action-btn span {
@@ -1445,19 +1728,22 @@ expandFullCart {
 		text-shadow: 0px 0px 0px #eee;
 	}
 
-	.ad {
-		top: 0px;
-		left: 65.5px;
-	}
-
 	/*=============== SIDENAV ===============*/
 
-	.loginName {
+	.sidenavName {
 		right: 100px;
 	}
 
-	.sidenav {
-		width: 25%;
+	.sidenav:nth-child(1n) {
+		width: 30%;
+	}
+
+	.ad-cart {
+		left: 70px;
+	}
+
+	.ad-wishlist {
+		left: 110px;
 	}
 
 	/*=============== HOME ===============*/

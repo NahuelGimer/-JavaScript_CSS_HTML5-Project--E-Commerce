@@ -1,3 +1,7 @@
+var total1 = 0;
+var total2 = 0;
+var total3 = 0;
+var total4 = 0;
 let signinFormF1 = false,
 	signupF1 = false,
 	signinF1 = false,
@@ -6,22 +10,20 @@ let signinFormF1 = false,
 	subF3 = false,
 	subF4 = false,
 	dropF1 = false,
+	totalF1 = false,
 	cartF1 = false,
 	cartF2 = false,
 	cartF3 = false,
-	cartF4 = false,
-	cartF5 = false,
-	cartF6 = false,
-	cartF7 = false,
-	cartF8 = false,
 	heartF1 = false,
 	heartF2 = false,
-	heartF3 = false,
-	heartF4 = false,
-	heartF5 = false,
-	heartF6 = false,
-	heartF7 = false,
-	heartF8 = false;
+	heartF3 = false;
+
+function categoriesNav() {
+	document.getElementById("categoriesNav").style.animation = "expandLeft 0.3s forwards";
+	document.getElementById("categoriesNav").style.display = "block";
+	document.getElementById("overlay").style.animation = "show 0.3s";
+	document.getElementById("overlay").style.display = "block";
+}
 
 function closeCategories() {
 	document.getElementById("categoriesNav").style.animation = "collapseLeft 0.3s forwards";
@@ -35,11 +37,16 @@ function closeLogin() {
 	document.getElementById("overlay").style.display = "none";
 }
 
-function categoriesNav() {
-	document.getElementById("categoriesNav").style.animation = "expandLeft 0.3s forwards";
-	document.getElementById("categoriesNav").style.display = "block";
-	document.getElementById("overlay").style.animation = "show 0.3s";
-	document.getElementById("overlay").style.display = "block";
+function closeWishlist() {
+	document.getElementById("wishlistNav").style.animation = "collapseRight 0.3s forwards";
+	document.getElementById("overlay").style.animation = "hide 0.3s";
+	document.getElementById("overlay").style.display = "none";
+}
+
+function closeCart() {
+	document.getElementById("cartNav").style.animation = "collapseRight 0.3s forwards";
+	document.getElementById("overlay").style.animation = "hide 0.3s";
+	document.getElementById("overlay").style.display = "none";
 }
 
 function sub1() {
@@ -130,7 +137,22 @@ function loginNav() {
 	document.getElementById("loginNav").style.display = "block";
 	document.getElementById("overlay").style.animation = "show 0.3s";
 	document.getElementById("overlay").style.display = "block";
-	document.getElementById("categories-ad").classList.remove("up");
+}
+
+function wishlistNav() {
+	document.getElementById("wishlistNav").style.animation = "expandRight 0.3s forwards";
+	document.getElementById("wishlistNav").style.display = "block";
+	document.getElementById("overlay").style.animation = "show 0.3s";
+	document.getElementById("overlay").style.display = "block";
+	document.getElementById("ad-wishlist").style.display = "none";
+}
+
+function cartNav() {
+	document.getElementById("cartNav").style.animation = "expandRight 0.3s forwards";
+	document.getElementById("cartNav").style.display = "block";
+	document.getElementById("overlay").style.animation = "show 0.3s";
+	document.getElementById("overlay").style.display = "block";
+	document.getElementById("ad-cart").style.display = "none";
 }
 
 function signinForm() {
@@ -247,9 +269,91 @@ function logout() {
 	document.getElementById("loginMenu").innerHTML = "Login";
 }
 
-function ad() {
-	document.getElementById("categories-ad").classList.remove("up");
-	document.getElementById("login-ad").classList.remove("up");
+function cartTotal1() {
+	var total1 = 0;
+
+	var priceElement1 = document.getElementById("sidenavCartDescriptionPriceNew1");
+	var quantityElement1 = document.getElementById("sidenavCartDescriptionQuantity1");
+	var price1 = priceElement1.innerHTML.replace("$", "");
+	var quantity1 = quantityElement1.value;
+	total1 = total1 + price1 * quantity1;
+	document.getElementById("sidenavDescriptionSubtotalPrice1").innerHTML = "$" + total1;
+}
+
+function cartTotal2() {
+	var total2 = 0;
+	var priceElement2 = document.getElementById("sidenavCartDescriptionPriceNew2");
+	var quantityElement2 = document.getElementById("sidenavCartDescriptionQuantity2");
+	var price2 = priceElement2.innerHTML.replace("$", "");
+	var quantity2 = quantityElement2.value;
+	total2 = total2 + price2 * quantity2;
+
+	document.getElementById("sidenavDescriptionSubtotalPrice2").innerHTML = "$" + total2;
+}
+
+function cartTotal3() {
+	var total3 = 0;
+	var priceElement3 = document.getElementById("sidenavCartDescriptionPriceNew3");
+	var quantityElement3 = document.getElementById("sidenavCartDescriptionQuantity3");
+	var price3 = priceElement3.innerHTML.replace("$", "");
+	var quantity3 = quantityElement3.value;
+	total3 = total3 + price3 * quantity3;
+
+	document.getElementById("sidenavDescriptionSubtotalPrice3").innerHTML = "$" + total3;
+}
+
+function cartTotal() {
+	var total1 = 0;
+	var total2 = 0;
+	var total3 = 0;
+	var total4 = 0;
+	var priceElement1 = document.getElementById("sidenavCartDescriptionPriceNew1");
+	var priceElement2 = document.getElementById("sidenavCartDescriptionPriceNew2");
+	var priceElement3 = document.getElementById("sidenavCartDescriptionPriceNew3");
+	var quantityElement1 = document.getElementById("sidenavCartDescriptionQuantity1");
+	var quantityElement2 = document.getElementById("sidenavCartDescriptionQuantity2");
+	var quantityElement3 = document.getElementById("sidenavCartDescriptionQuantity3");
+	var price1 = priceElement1.innerHTML.replace("$", "");
+	var price2 = priceElement2.innerHTML.replace("$", "");
+	var price3 = priceElement3.innerHTML.replace("$", "");
+	var quantity1 = quantityElement1.value;
+	var quantity2 = quantityElement2.value;
+	var quantity3 = quantityElement3.value;
+	total1 = total1 + price1 * quantity1;
+	total2 = total2 + price2 * quantity2;
+	total3 = total3 + price3 * quantity3;
+	total4 = total1 + total2 + total3;
+
+	document.getElementById("sidenavCartBuyTotalPrice").innerHTML = "$" + Math.floor(total4);
+}
+
+function cartTrash1() {
+	document.getElementById("sidenavCartProduct1").style.display = "none";
+	document.getElementById("sidenavCartDescriptionQuantity1").value = 0;
+	cart1();
+}
+function cartTrash2() {
+	document.getElementById("sidenavCartProduct2").style.display = "none";
+	document.getElementById("sidenavCartDescriptionQuantity2").value = 0;
+	cart2();
+}
+function cartTrash3() {
+	document.getElementById("sidenavCartProduct3").style.display = "none";
+	document.getElementById("sidenavCartDescriptionQuantity3").value = 0;
+	cart3();
+}
+
+function wishlistTrash1() {
+	document.getElementById("sidenavWishlistProduct1").style.display = "none";
+	heart1();
+}
+function wishlistTrash2() {
+	document.getElementById("sidenavWishlistProduct2").style.display = "none";
+	heart2();
+}
+function wishlistTrash3() {
+	document.getElementById("sidenavWishlistProduct3").style.display = "none";
+	heart3();
 }
 
 function cart1() {
@@ -257,11 +361,18 @@ function cart1() {
 	if (cartF1) {
 		document.getElementById("cart1").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart1").classList.add("fi-ss-shopping-cart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
+		document.getElementById("sidenavCartProduct1").style.display = "block";
+		document.getElementById("ad-cart").style.display = "block";
+		document.getElementById("sidenavCartDescriptionQuantity1").value =
+			document.getElementById("sidenavCartDescriptionQuantity1").value + 1;
+		cartTotal();
+		cartTotal1();
 	} else {
 		document.getElementById("cart1").classList.remove("fi-ss-shopping-cart");
 		document.getElementById("cart1").classList.add("fi-rs-shopping-cart");
+		document.getElementById("sidenavCartProduct1").style.display = "none";
+		document.getElementById("sidenavCartDescriptionQuantity1").value = 0;
+		cartTotal();
 	}
 }
 
@@ -270,11 +381,12 @@ function heart1() {
 	if (heartF1) {
 		document.getElementById("heart1").classList.remove("fi-rs-heart");
 		document.getElementById("heart1").classList.add("fi-ss-heart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
+		document.getElementById("sidenavWishlistProduct1").style.display = "block";
+		document.getElementById("ad-wishlist").style.display = "block";
 	} else {
 		document.getElementById("heart1").classList.remove("fi-ss-heart");
 		document.getElementById("heart1").classList.add("fi-rs-heart");
+		document.getElementById("sidenavWishlistProduct1").style.display = "none";
 	}
 }
 
@@ -283,11 +395,19 @@ function cart2() {
 	if (cartF2) {
 		document.getElementById("cart2").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart2").classList.add("fi-ss-shopping-cart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
+		document.getElementById("sidenavCartProduct2").style.display = "block";
+		document.getElementById("ad-cart").style.display = "block";
+		document.getElementById("sidenavCartDescriptionQuantity2").value =
+			document.getElementById("sidenavCartDescriptionQuantity2").value + 1;
+		cartTotal();
+		cartTotal2();
 	} else {
 		document.getElementById("cart2").classList.remove("fi-ss-shopping-cart");
 		document.getElementById("cart2").classList.add("fi-rs-shopping-cart");
+
+		document.getElementById("sidenavCartProduct2").style.display = "none";
+		document.getElementById("sidenavCartDescriptionQuantity2").value = 0;
+		cartTotal();
 	}
 }
 
@@ -296,11 +416,12 @@ function heart2() {
 	if (heartF2) {
 		document.getElementById("heart2").classList.remove("fi-rs-heart");
 		document.getElementById("heart2").classList.add("fi-ss-heart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
+		document.getElementById("sidenavWishlistProduct2").style.display = "block";
+		document.getElementById("ad-wishlist").style.display = "block";
 	} else {
 		document.getElementById("heart2").classList.remove("fi-ss-heart");
 		document.getElementById("heart2").classList.add("fi-rs-heart");
+		document.getElementById("sidenavWishlistProduct2").style.display = "none";
 	}
 }
 
@@ -309,11 +430,19 @@ function cart3() {
 	if (cartF3) {
 		document.getElementById("cart3").classList.remove("fi-rs-shopping-cart");
 		document.getElementById("cart3").classList.add("fi-ss-shopping-cart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
+		document.getElementById("sidenavCartProduct3").style.display = "block";
+		document.getElementById("ad-cart").style.display = "block";
+		document.getElementById("sidenavCartDescriptionQuantity3").value =
+			document.getElementById("sidenavCartDescriptionQuantity3").value + 1;
+		cartTotal();
+		cartTotal3();
 	} else {
 		document.getElementById("cart3").classList.remove("fi-ss-shopping-cart");
 		document.getElementById("cart3").classList.add("fi-rs-shopping-cart");
+
+		document.getElementById("sidenavCartProduct3").style.display = "none";
+		document.getElementById("sidenavCartDescriptionQuantity3").value = 0;
+		cartTotal();
 	}
 }
 
@@ -322,140 +451,11 @@ function heart3() {
 	if (heartF3) {
 		document.getElementById("heart3").classList.remove("fi-rs-heart");
 		document.getElementById("heart3").classList.add("fi-ss-heart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
+		document.getElementById("sidenavWishlistProduct3").style.display = "block";
+		document.getElementById("ad-wishlist").style.display = "block";
 	} else {
 		document.getElementById("heart3").classList.remove("fi-ss-heart");
 		document.getElementById("heart3").classList.add("fi-rs-heart");
-	}
-}
-
-function cart4() {
-	cartF4 = !cartF4;
-	if (cartF4) {
-		document.getElementById("cart4").classList.remove("fi-rs-shopping-cart");
-		document.getElementById("cart4").classList.add("fi-ss-shopping-cart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("cart4").classList.remove("fi-ss-shopping-cart");
-		document.getElementById("cart4").classList.add("fi-rs-shopping-cart");
-	}
-}
-
-function heart4() {
-	heartF4 = !heartF4;
-	if (heartF4) {
-		document.getElementById("heart4").classList.remove("fi-rs-heart");
-		document.getElementById("heart4").classList.add("fi-ss-heart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("heart4").classList.remove("fi-ss-heart");
-		document.getElementById("heart4").classList.add("fi-rs-heart");
-	}
-}
-
-function cart5() {
-	cartF5 = !cartF5;
-	if (cartF5) {
-		document.getElementById("cart5").classList.remove("fi-rs-shopping-cart");
-		document.getElementById("cart5").classList.add("fi-ss-shopping-cart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("cart5").classList.remove("fi-ss-shopping-cart");
-		document.getElementById("cart5").classList.add("fi-rs-shopping-cart");
-	}
-}
-
-function heart5() {
-	heartF5 = !heartF5;
-	if (heartF5) {
-		document.getElementById("heart5").classList.remove("fi-rs-heart");
-		document.getElementById("heart5").classList.add("fi-ss-heart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("heart5").classList.remove("fi-ss-heart");
-		document.getElementById("heart5").classList.add("fi-rs-heart");
-	}
-}
-
-function cart6() {
-	cartF6 = !cartF6;
-	if (cartF6) {
-		document.getElementById("cart6").classList.remove("fi-rs-shopping-cart");
-		document.getElementById("cart6").classList.add("fi-ss-shopping-cart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("cart6").classList.remove("fi-ss-shopping-cart");
-		document.getElementById("cart6").classList.add("fi-rs-shopping-cart");
-	}
-}
-
-function heart6() {
-	heartF6 = !heartF6;
-	if (heartF6) {
-		document.getElementById("heart6").classList.remove("fi-rs-heart");
-		document.getElementById("heart6").classList.add("fi-ss-heart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("heart6").classList.remove("fi-ss-heart");
-		document.getElementById("heart6").classList.add("fi-rs-heart");
-	}
-}
-
-function cart7() {
-	cartF7 = !cartF7;
-	if (cartF7) {
-		document.getElementById("cart7").classList.remove("fi-rs-shopping-cart");
-		document.getElementById("cart7").classList.add("fi-ss-shopping-cart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("cart7").classList.remove("fi-ss-shopping-cart");
-		document.getElementById("cart7").classList.add("fi-rs-shopping-cart");
-	}
-}
-
-function heart7() {
-	heartF7 = !heartF7;
-	if (heartF7) {
-		document.getElementById("heart7").classList.remove("fi-rs-heart");
-		document.getElementById("heart7").classList.add("fi-ss-heart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("heart7").classList.remove("fi-ss-heart");
-		document.getElementById("heart7").classList.add("fi-rs-heart");
-	}
-}
-
-function cart8() {
-	cartF8 = !cartF8;
-	if (cartF8) {
-		document.getElementById("cart8").classList.remove("fi-rs-shopping-cart");
-		document.getElementById("cart8").classList.add("fi-ss-shopping-cart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("cart8").classList.remove("fi-ss-shopping-cart");
-		document.getElementById("cart8").classList.add("fi-rs-shopping-cart");
-	}
-}
-
-function heart8() {
-	heartF8 = !heartF8;
-	if (heartF8) {
-		document.getElementById("heart8").classList.remove("fi-rs-heart");
-		document.getElementById("heart8").classList.add("fi-ss-heart");
-		document.getElementById("categories-ad").classList.add("up");
-		document.getElementById("login-ad").classList.add("up");
-	} else {
-		document.getElementById("heart8").classList.remove("fi-ss-heart");
-		document.getElementById("heart8").classList.add("fi-rs-heart");
+		document.getElementById("sidenavWishlistProduct3").style.display = "none";
 	}
 }
