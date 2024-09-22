@@ -35,11 +35,6 @@
 
 /*=============== BASE ===============*/
 
-+ {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
 
 input,
 textarea,
@@ -120,7 +115,7 @@ input[type="number"] {
 
 .rotateAgain {
 	transition: transform 0.5s;
-	transform: rotate(-360deg);
+	transform: rotate(360deg);
 }
 
 .ad {
@@ -577,7 +572,6 @@ expandFullCart {
 	position: relative;
 	right: 50%;
 	top: 15px;
-	left: -5px;
 }
 
 .nav__item:nth-child(3n) {
@@ -1259,30 +1253,38 @@ expandFullCart {
 	justify-content: center;
 	border-radius: 0.6rem;
 	padding: 0.2rem 1rem;
+	width:900px;
 }
 
-.product__item:hover .product__price {
-	top: 79%;
-}
 
 .product__banner,
 .product__images {
 	position: relative;
 }
 
+
+
 .product__banner {
 	padding: 0.625rem 0.75rem 1.75rem;
 }
+
+
+.product__images img {
+	height: 300px;
+}
+
+
+.product__images__div{
+	position:relative;
+}
+
+
 
 .product__images {
 	display: flex;
 	justify-content: center;
 }
 
-.product__images img {
-	height: 300px;
-	z-index: -200;
-}
 
 .product__item-1,
 .product__item-3,
@@ -1391,7 +1393,7 @@ expandFullCart {
 }
 
 .old__price {
-	display: none;
+	display: block;
 }
 /*=============== SLIDER ===============*/
 
@@ -1554,9 +1556,16 @@ expandFullCart {
 		height: inherit;
 	}
 
+	div.nav.container{
+		justify-items: center;
+		align-items: center;
+  
+	}
+
 	.nav__list {
 		display: flex;
 		flex-direction: row;
+		margin-right:10px;
 	}
 
 	.nav__logo-img {
@@ -1566,6 +1575,7 @@ expandFullCart {
 		right: 10px;
 		margin: 0;
 	}
+
 
 	.nav__item:first-child,
 	.nav__item:nth-child(2n),
@@ -1597,7 +1607,7 @@ expandFullCart {
 		order: 3;
 		margin-right: 30px;
 		right: 0px;
-		margin-top: 23.5px;
+		margin-top: 24.5px;
 	}
 
 	.nav__item .header__action-btn span {
@@ -1714,8 +1724,7 @@ expandFullCart {
 	/*=============== NAV ===============*/
 
 	.nav__logo-img {
-		width: 125px;
-		margin-top: -10px;
+		margin-top: 5px;
 	}
 
 	.nav__item .header__action-btn span {
@@ -1728,6 +1737,7 @@ expandFullCart {
 		transition: 1s;
 		text-shadow: 0px 0px 0px #eee;
 	}
+
 
 	/*=============== SIDENAV ===============*/
 
@@ -1810,19 +1820,13 @@ expandFullCart {
 	/*=============== PRODUCTS ===============*/
 
 	.products {
-		top: 165px;
+		top: 190px;
 	}
 	.full {
 		left: 17%;
 		margin-top: 4px;
 	}
 
-	.product__item:hover .old__price {
-		display: flex;
-	}
-	.product__item:hover .product__price {
-		top: 76%;
-	}
 
 	.slider-indicators li {
 		display: flex;
@@ -1850,4 +1854,8 @@ expandFullCart {
 	}
 
 	/*=============== FOOTER ===============*/
+
+	.footer__hooks{
+		top:-15px;
+	}
 }
