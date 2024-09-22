@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== SEO ====================-->
+
+    <title>E-Shoes</title>
+    <meta name="author" content="gimernahuel.work@gmail.com">
+    <meta name="description" content="Ecommerce of Shoes">
+    <meta name="keywords" content="ecommerce, shoes">
+    <meta name="robots" content="index">
+    <meta name="robots" content="follow">
+    <meta property=d"og:title" content="E-Shoes">
+    <meta property="og:description" content="Ecommerce of Shoes">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nahuelgimer.github.io/ecommerce">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="canonical" href="https://nahuelgimer.github.io/ecommerce">
+
+    <!--==================== ICONS ====================-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
+
+
+    <!--==================== CSS ====================-->
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+    <!--==================== SWIFFY CSS ====================-->
+
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+    <!--==================== GOOGLE FONTS ====================-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Yanone+Kaffeesatz:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <div id="overlay" onclick="closeCategories();closeLogin();closeWishlist();closeCart()"></div>
+        <div class="nav container">
+            <div class="nav-menu slider" id="nav-menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item">
+                        <div class="sidenav" id="categoriesNav">
+                            <div class="sidenavContainerSub" id="subContainer1">
+                                <div class=" mainMenu" onclick="sub1()">
+                                    <div class="sidenavHeader">
+                                        <i class="fi fi-rs-angle-left"></i>
+                                        <span>Main Menu</span>
+                                    </div>
+                                    <div class="sidenavContentHeader">Men</div>
+                                    <a href="#" onclick="closeCategories()">
+                                        <div class="sidenavContent">Air Force</div>
+                                    </a>
+                                    <a href="#" onclick="closeCategories()">
+                                        <div class="sidenavContent">Dunk</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="sidenavContainerSub" id="subContainer2">
+                                <div class=" mainMenu" onclick="sub2()">
+                                    <div class="sidenavHeader">
+                                        <i class="fi fi-rs-angle-left"></i>
+                                        <span>Main Menu</span>
+                                    </div>
+                                    <div class="sidenavContentHeader">Woman</div>
+                                    <a href="#" onclick="closeCategories()">
+                                        <div class="sidenavContent">Air Force</div>
+                                    </a>
+                                    <a href="#" onclick="closeCategories()">
+                                        <div class="sidenavContent">Dunk</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="sidenavContainerSub" id="subContainer3">
+                                <div class=" mainMenu" onclick="sub3()">
+                                    <div class="sidenavHeader">
+                                        <i class="fi fi-rs-angle-left"></i>
+                                        <span>Main Menu</span>
+                                    </div>
+                                    <div class="sidenavContentHeader">Boy</div>
+                                    <a href="#" onclick="closeCategories()">
+                                        <div class="sidenavContent">Air Force</div>
+                                    </a>
+                                    <a href="#" onclick="closeCategories()">
+                                        <div class="sidenavContent">Dunk</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="sidenavContainerSub" id="subContainer4">
+                                <div class=" mainMenu" onclick="sub4()">
+                                    <div class="sidenavHeader">
+                                        <i class="fi fi-rs-angle-left"></i>
+                                        <span>Main Menu</span>
+                                    </div>
+                                    <div class="sidenavContentHeader">Girl</div>
+                                    <a href="#" onclick="closeCategories()">
+                                        <div class="sidenavContent">Air Force</div>
+                                    </a>
+                                    <a href="#" onclick="closeCategories()">
+                                        <div class="sidenavContent">Dunk</div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="closeBtn" id="closeBtnCategories" onclick="closeCategories()">&times</div>
+
+                            <div id="mainContainer">
+                                <a href="#" class="sidenavHeader" onclick="loginNav(); loginCategories()">
+                                    <span id="sidenavHello">Hello, Sign In.</span>
+                                </a>
+                                <div class="sidenavContentHeader">Trending</div>
+                                <a href="#" onclick="closeCategories()">
+                                    <div class="sidenavContent">Air Force</div>
+                                </a>
+                                <a href="#" onclick="closeCategories()">
+                                    <div class="sidenavContent">Dunk</div>
+                                </a>
+
+                                <hr />
+                                <div class="sidenavContentHeader">Type</div>
+                                <a class="sidenavContentRow" href="#" onclick="sub1()">
+                                    <div class="sidenavRow">Men
+                                    </div>
+                                    <i class="fi fi-rs-angle-right"></i>
+                                </a>
+                                <a class="sidenavContentRow" href="#" onclick="sub2()">
+                                    <div class="sidenavRow">Women
+                                    </div>
+                                    <i class="fi fi-rs-angle-right"></i>
+                                </a>
+                                <a class="sidenavContentRow" href="#" onclick="drop()">
+                                    <div class="sidenavRow">Kids
+                                    </div>
+                                    <i class="fi fi-rs-angle-down" id="dropContainerArrow"></i>
+                                    <div class="sidenavContainerDrop" id="dropContainerDiv">
+                                        <hr />
+                                        <a class="sidenavContentRow" href="#" onclick="sub3()">
+                                            <div class="sidenavRow">Boy</div>
+                                            <i class="fi fi-rs-angle-right"></i>
+                                        </a>
+                                        <a class="sidenavContentRow" href="#" onclick="sub4()">
+                                            <div class="sidenavRow">Girl</div>
+                                            <i class="fi fi-rs-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <a href="#" class="header__action-btn" onclick="categoriesNav()">
+                            <span>categories</span>
+                            <i class="fi fi-rr-menu-burger"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__logo">
+                            <img src="assets/img/logo.png" alt="E-Shoes Logo" class="nav__logo-img">
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <div class="sidenav" id="loginNav">
+                            <div class="sidenavContainer">
+                                <div class="mainMenu">
+                                    <div class="sidenavHeader">
+                                        <div class="closeBtn" id="closeBtnLogin" onclick="closeLogin()">&times</div>
+                                        <a href="#" class="sidenavName" onclick="closeLogin()"> <span
+                                                id="loginMenu">Login</span></a>
+                                    </div>
+                                    <div class="login">
+                                        <div class="signup" id="signup">
+                                            <form class="signupForm" id="signupForm">
+                                                <label>Name</label>
+                                                <input type="text" maxlength="20" placeholder=" abc" id="signupName"
+                                                    onkeydown="return /[0-9a-zA-Z]/i.test(event.key)"
+                                                    onpaste="return false;" ondrop="return false;" required autofocus>
+                                                <label>Mail</label>
+                                                <input type="email" placeholder="abc@abc.com" id="signupEmail" required>
+                                                <label>Password</label>
+                                                <input type="password" placeholder="abc123" id="signupPassword"
+                                                    required>
+                                                <p id="signupFormStatus"></p>
+                                                <input type="button" class="submitForm" value="Sign Up"
+                                                    id="signupSubmit" id="signupSubmit" onclick="signup()">
+                                            </form>
+                                            <p>Already have an account? <a href="#" onclick="signinForm()">Sign In</a>
+                                            </p>
+                                        </div>
+                                        <div class="signin" id="signin">
+                                            <form class="signinForm" id="signinForm">
+                                                <label>Mail</label>
+                                                <input type="email" placeholder="abc@abc.com" id="signinEmail" required
+                                                    autofocus>
+                                                <label>Password</label>
+                                                <input type="password" placeholder="abc123" id="signinPassword"
+                                                    required>
+                                                <p id="signinFormStatus"></p>
+                                                <input type="button" class="submitForm" value="Sign In"
+                                                    id="signinSubmit" onclick="signin()">
+
+                                            </form>
+                                            <p>Don't have an account? <a href="#" onclick="signinForm()">Sign Up</a></p>
+                                        </div>
+                                        <div class="signinSuccess" id="signinSuccess">
+                                            <div class="signinSuccessDivisor">
+                                                <p id="signinSuccessName"></p>
+                                                <button class="signinSuccessButton" id="logout"
+                                                    onclick="logout()">Logout</button>
+                                                <div class="signinSuccessButtons"><button
+                                                        class="signinSuccessButton text" id="signinWishlist"
+                                                        onclick="closeLogin(); wishlistNav()">Wishlist</button>
+                                                    <button class="signinSuccessButton text" id="signinCart"
+                                                        onclick="closeLogin(); cartNav()">Cart</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="header__action-btn" onclick="loginNav()">
+                            <span id="loginTitle">login</span>
+                            <i class="fi fi-rs-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <div class="sidenav" id="wishlistNav">
+                            <div class="sidenavContainer">
+                                <div class="mainMenu">
+                                    <div class="sidenavHeader">
+                                        <div class="closeBtn" id="closeBtnWishlist" onclick="closeWishlist()">&times
+                                        </div>
+                                        <a href="#" class="sidenavName" onclick="closeWishlist()"> <span
+                                                id="wishlistMenu">Wishlist</span></a>
+                                    </div>
+                                    <div class="sidenavCart">
+                                        <div class="sidenavWishlistProduct" id="sidenavWishlistProduct1">
+                                            <div class="sidenavWishlistProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-1.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription sidenavWishlistDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Uno</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew">$236.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                </div>
+                                                <div class="sidenavWishlistDescriptionFull">
+                                                    <span>Full</span>
+                                                    <i class="fi fi-rr-bolt"></i>
+                                                </div>
+                                                <i class="fi fi-ss-heart sidenavWishlistEliminate"
+                                                    onclick="wishlistTrash1();"></i>
+                                            </div>
+                                        </div>
+                                        <div class="sidenavWishlistProduct" id="sidenavWishlistProduct2">
+                                            <div class="sidenavWishlistProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-2.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription sidenavWishlistDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Dos</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew">$237.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                </div>
+
+                                                <i class="fi fi-ss-heart sidenavWishlistEliminate"
+                                                    onclick="wishlistTrash2();"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="sidenavWishlistProduct" id="sidenavWishlistProduct3">
+                                            <div class="sidenavWishlistProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-8.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription sidenavWishlistDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Tres</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew">$238.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+
+                                                </div>
+                                                <div class="sidenavWishlistDescriptionFull">
+                                                    <span>Full</span>
+                                                    <i class="fi fi-rr-bolt"></i>
+                                                </div>
+                                                <i class="fi fi-ss-heart sidenavWishlistEliminate"
+                                                    onclick="wishlistTrash3();"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="header__action-btn" onclick="wishlistNav()">
+                            <span id="wishlistTitle">wishlist</span>
+                            <i class="fi fi-rs-heart"></i>
+                            <div class="ad ad-wishlist" id="ad-wishlist"></div>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <div class="sidenav" id="cartNav">
+                            <div class="sidenavContainer">
+                                <div class="mainMenu">
+                                    <div class="sidenavHeader">
+                                        <div class="closeBtn" id="closeBtnCart" onclick="closeCart()">&times
+                                        </div>
+                                        <a href="#" class="sidenavName" onclick="closeCart()"> <span
+                                                id="cartMenu">Cart</span></a>
+                                    </div>
+                                    <div class="sidenavCart">
+                                        <div class="sidenavCartProduct" id="sidenavCartProduct1">
+                                            <div class="sidenavCartProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-1.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Uno</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew"
+                                                            id="sidenavCartDescriptionPriceNew1">$236.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                    <input class="sidenavCartDescriptionQuantity" type="number"
+                                                        value="0" min="1" max="10" onKeyDown="return false"
+                                                        id="sidenavCartDescriptionQuantity1"
+                                                        onclick="cartTotal1(); cartTotal()">
+                                                    <sup>u</sup>
+
+                                                </div>
+                                                <div class="sidenavDescriptionSubtotal">
+                                                    <span class="sidenavDescriptionSubtotalText">Subtotal: </span>
+                                                    <span class="sidenavDescriptionSubtotalPrice"
+                                                        id="sidenavDescriptionSubtotalPrice1"></span>
+                                                </div>
+                                                <div class="sidenavCartDescriptionFull">
+                                                    <span>Full</span>
+                                                    <i class="fi fi-rr-bolt"></i>
+                                                </div>
+                                                <i class="fi fi-rr-trash sidenavCartEliminate"
+                                                    onclick="cartTrash1(); cartTotal()"></i>
+                                            </div>
+                                        </div>
+                                        <div class="sidenavCartProduct" id="sidenavCartProduct2">
+                                            <div class="sidenavCartProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-2.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Dos</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew"
+                                                            id="sidenavCartDescriptionPriceNew2">$237.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                    <input class="sidenavCartDescriptionQuantity" type="number"
+                                                        value="0" min="1" max="10" onKeyDown="return false"
+                                                        id="sidenavCartDescriptionQuantity2"
+                                                        onclick="cartTotal2(); cartTotal()">
+                                                    <sup>u</sup>
+                                                </div>
+                                                <div class="sidenavDescriptionSubtotal">
+                                                    <span class="sidenavDescriptionSubtotalText">Subtotal: </span>
+                                                    <span class="sidenavDescriptionSubtotalPrice"
+                                                        id="sidenavDescriptionSubtotalPrice2"></span>
+                                                </div>
+                                                <i class="fi fi-rr-trash sidenavCartEliminate"
+                                                    onclick="cartTrash2(); cartTotal()"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="sidenavCartProduct" id="sidenavCartProduct3">
+                                            <div class="sidenavCartProductDiv">
+                                                <div class="sidenavCartImage">
+                                                    <img src="assets/img/product-8.jpg">
+                                                </div>
+                                                <div class="sidenavCartDescription">
+                                                    <span class="sidenavCartDescriptionTitle">Asics Tres</span>
+
+                                                    <div class="sidenavCartDescriptionPrice">
+                                                        <span class="sidenavCartDescriptionPriceNew"
+                                                            id="sidenavCartDescriptionPriceNew3">$238.85</span>
+                                                        <span class="sidenavCartDescriptionPriceOld">$245.8</span>
+                                                    </div>
+                                                    <input class="sidenavCartDescriptionQuantity" type="number"
+                                                        value="0" min="1" max="10" onKeyDown="return false"
+                                                        id="sidenavCartDescriptionQuantity3"
+                                                        onclick="cartTotal3(); cartTotal()">
+                                                    <sup>u</sup>
+
+                                                </div>
+                                                <div class="sidenavDescriptionSubtotal">
+                                                    <span class="sidenavDescriptionSubtotalText">Subtotal:</span>
+                                                    <span class="sidenavDescriptionSubtotalPrice"
+                                                        id="sidenavDescriptionSubtotalPrice3"></span>
+                                                </div>
+
+                                                <div class="sidenavCartDescriptionFull">
+                                                    <span>Full</span>
+                                                    <i class="fi fi-rr-bolt"></i>
+                                                </div>
+                                                <i class="fi fi-rr-trash sidenavCartEliminate"
+                                                    onclick="cartTrash3(); cartTotal()"></i>
+                                            </div>
+                                        </div>
+                                        <div class="sidenavCartBuy">
+                                            <span class="sidenavCartBuyTotal">Total:</span>
+                                            <span class="sidenavCartBuyTotalPrice"
+                                                id="sidenavCartBuyTotalPrice">$0</span>
+                                        </div>
+
+                                        <a href="#" class="sidenavCartBuyTotalPriceButton">
+                                            <span>Buy</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href=" #" class="header__action-btn" onclick="cartNav()">
+                            <span id="cartTitle">cart</span>
+                            <i class="fi fi-rs-shopping-cart"></i>
+                            <div class="ad ad-cart" id="ad-cart"></div>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__div">
+                <div class="home__info">
+                    <div class="home__text">
+                        <h2>One Trip</h2>
+                        <h3>One Experience</h3>
+                    </div>
+                    <div class="home__actions">
+                        <a href="#products" class="home__action">
+                            <div class="btn"> <span>Buy</span><i
+                                    class="fi fi-rr-arrow-small-right home__action-first"></i>
+                            </div>
+                            <span>&nbsp</span>
+                        </a>
+                        <a href="#discover" class="home__action">
+                            <div class="btn"> <span>Discover</span><i
+                                    class="fi fi-rr-arrow-small-right home__action-second"></i>
+                            </div>
+                            <span>&nbsp</span>
+                        </a>
+                    </div>
+                </div>
+                <video src="assets/img/spot.mp4" alt="" class="home__video" autoplay muted loop>
+                    <source src="assets/img/spot.mp4" alt="E-Shoes Promo" type="video/mp4" />
+                </video>
+            </div>
+            </div>
+        </section>
+
+        <!--==================== SPOT GLOBAL ====================-->
+        <section class="spot section" id="discover">
+            <div class="spot">
+                <a href="#" class="spot__section">
+                    <img src="assets/img/shoes1.webp" alt="Air-Force Shoes" class="spot__image">
+                    <span class="btn">Air Force</span>
+                    <i>&nbsp</i>
+                </a>
+                <a href="#" class="spot__section">
+                    <img src="assets/img/shoes2.webp" alt="Dunk Shoes" class="spot__image">
+                    <span class="btn">Dunk</span>
+                    <i>&nbsp</i>
+                </a>
+            </div>
+        </section>
+
+        <!--==================== SPOTS CATEGORIES ====================-->
+        <section class="spots section">
+            <div class="spots">
+                <a href="#" class="spots__section">
+                    <img src="assets/img/men.webp" alt="Men Shoes" class="spots__image">
+                    <span class="btn">Men</span>
+                </a>
+                <a href=" #" class="spots__section">
+                    <img src="assets/img/women.webp" alt="Woman Shoes" class="spots__image">
+                    <span class="btn">Women</span>
+                </a>
+                <a href="#" class="spots__section">
+                    <img src="assets/img/kids.webp" alt="Kids Shoes" class="spots__image">
+                    <span class="btn">Kids</span>
+                </a>
+            </div>
+        </section>
+
+        <!--==================== PRODUCTS ====================-->
+        <section class="products section container" id="products">
+            <div class="tab__items">
+                <div class="swiffy-slider slider-nav-dark slider-nav-sm slider-nav-autohide slider-item-first-visible slider-nav-nodelay slider-nav-page slider-nav-autoplay slider-nav-autopause slider-indicators-dark slider-indicators-highlight slider-nav-animation slider-nav-animation-fast slider-nav-touch slider-nav-autohide"
+                    data-slider-nav-autoplay-interval="300000">
+                    <ul class=" products__container slider-container">
+                        <li class="product__item product__item-1" id="slide-visible">
+                            <div class="product__banner">
+                                <a href="#" class="product__images">
+                                    <div class="product__images__div">
+                                    <img src="assets/img/product-1.jpg" alt="Ecommerce Shoes"
+                                        class="product__img default">
+                                    </div>
+                                </a>
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart1()">
+                                        <i class="fi fi-rs-heart heart" id="heart1"></i>
+                                    </button>
+                                </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart1()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart1"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="product__content">
+                                <a href="#">
+                                </a>
+                                <div class="product__price flex">
+                                    <del class="old__price">$245.8</del>
+                                    <span class="new__price">$236.85</span>
+                                </div>
+                                <div class="full">
+                                    <i class="fi fi-rr-bolt"></i>
+                                    <span>Full</span>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="product__item product__item-2" id="slide-visible">
+                            <div class="product__banner">
+                                <a href="#" class="product__images">
+                                    <div class="product__images__div">
+                                    <img src="assets/img/product-2.jpg" alt="Ecommerce Shoes"
+                                        class="product__img default">
+                                    </div>
+                                </a>
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart2()">
+                                        <i class="fi fi-rs-heart heart" id="heart2"></i>
+                                    </button>
+                                </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart2()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart2"></i>
+                                    </button>
+                                </div>
+
+
+                            </div>
+                            <div class="product__content">
+                                <a href="#">
+                                </a>
+
+                                <div class="product__price flex">
+                                    <del class="old__price">$245.8</del>
+                                    <span class="new__price">$237.85</span>
+                                </div>
+
+                                
+                                <div class="full">
+                                    <i class="fi fi-rr-bolt"></i>
+                                    <span>Full</span>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="product__item product__item-3">
+                            <div class="product__banner">
+                                <a href="#" class="product__images">
+                                    <div class="product__images__div">
+                                    <img src="assets/img/product-8.jpg" alt="Ecommerce Shoes"
+                                        class="product__img default">
+                                    </div>
+                                </a>
+                                <div class="product__action1">
+                                    <button class="action__btn" aria-label="Add to Wishlist" onclick="heart3()">
+                                        <i class="fi fi-rs-heart heart" id="heart3"></i>
+                                    </button>
+                                </div>
+                                <div class="product__action2">
+                                    <button class="action__btn cart__btn" aria-label="Add To Cart" onclick="cart3()">
+                                        <i class="fi fi-rs-shopping-cart cart" id="cart3"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="product__content">
+                                <a href="#">
+                                </a>
+
+                                <div class="product__price flex">
+                                    <del class="old__price">$245.8</del>
+                                    <span class="new__price">$238.85</span>
+                                </div>
+                                <div class="full">
+                                    <i class="fi fi-rr-bolt"></i>
+                                    <span>Full</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Add Arrows -->
+                    <button type="button" class="slider-nav"></button>
+                    <button type="button" class="slider-nav slider-nav-next"></button>
+                    <!-- Add Pagination -->
+                    <ul class="slider-indicators">
+                        <li class="active"></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!--==================== BENEFITS ====================-->
+        <section class="benefit section">
+            <div class="benefits__div">
+                <ul class="benefits__ul">
+                    <li class="benefits__action">
+                        <i class="fi fi-rs-truck-moving benefits__logo"></i>
+                        <div class="benefits__text">
+                            <h3 class="benefits__title">
+                                FREE SHIPPING</h3>
+                            <span class="benefits__description">On purchases over $1,000</span>
+                        </div>
+                    </li>
+                    <li class="benefits__action">
+                        <i class="fi fi-rr-credit-card benefits__logo"></i>
+                        <div class="benefits__text">
+                            <h3 class="benefits__title">INTEREST FREE FEES</h3>
+                            <a href="#" class="benefits__description">See bank promotions</a>
+                        </div>
+                    </li>
+                    <li class="benefits__action">
+                        <i class="fi fi-rs-box-alt benefits__logo"></i>
+                        <div class="benefits__text">
+                            <h3 class="benefits__title">FIRST CHANGE FREE</h3>
+                            <span class="benefits__description">
+                                Within 30 Days</span>
+                        </div>
+                    </li>
+                    <li class="benefits__action">
+                        <i class="fi fi-rr-headset benefits__logo"></i>
+                        <div class="benefits__text">
+                            <h3 class="benefits__title">0800-SHOES</h3>
+                            <span class="benefits__description">
+                                Monday to Friday 9:00 a.m. to 5:00 p.m.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__div">
+            <div class="footer__ab">
+                <div class="footer__text">
+                    <div class="footer__hooks">
+                        <a href="#products">Shop</a>
+                        <a href="#discover">Discover</a>
+                    </div>
+                    <div class="footer__links">
+                        <a href="mailto:gimernahuel.work@gmail.com">
+                            <i class="fi fi-rr-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://wa.me/5491126101998" target="_blank">
+                            <i class="fi fi-brands-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://github.com/NahuelGimer" target="_blank">
+                            <i class="fi fi-brands-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nahuelgimer/" target="_blank">
+                            <i class="fi fi-brands-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                    <div class="footer__rights">
+                        <span class="footer__author">
+                            © 2023 Nahuel Gimer.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div><img src="assets/img/footer.webp" alt="E-Shoes Footer" class="footer__image"></div>
+
+
+        </div>
+    </footer>
+    <!--==================== SWIFFY JS ====================-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider-extensions.min.js"
+        crossorigin="anonymous" defer></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
