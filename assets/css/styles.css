@@ -1466,7 +1466,7 @@ expandFullCart {
 .footer {
 	position: relative;
 	overflow: hidden;
-	z-index: -2000000;
+	z-index: 2000000;
 }
 
 .footer div {
