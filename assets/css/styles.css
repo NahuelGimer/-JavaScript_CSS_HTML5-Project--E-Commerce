@@ -1415,7 +1415,7 @@ expandFullCart {
 .benefit {
 	position: relative;
 	margin-top: 110px;
-	margin-bottom: -390px;
+	margin-bottom: -440px;
 	z-index: 200;
 }
 .benefits__div {
@@ -1466,7 +1466,6 @@ expandFullCart {
 .footer {
 	position: relative;
 	overflow: hidden;
-	z-index: 2000000;
 }
 
 .footer div {
