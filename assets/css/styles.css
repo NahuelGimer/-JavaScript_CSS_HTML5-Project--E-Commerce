@@ -1232,14 +1232,10 @@ expandFullCart {
 
 .products {
 	position: relative;
-	top: 75px;
+	top: 70px;
 	min-height: 750px;
 }
 
-.tab__items {
-	margin: 1.5rem;
-	height: 25vh;
-}
 
 .products__container {
 	position: relative;
@@ -1252,7 +1248,6 @@ expandFullCart {
 	position: relative;
 	justify-content: center;
 	border-radius: 0.6rem;
-	padding: 0.2rem 1rem;
 	width:900px;
 }
 
@@ -1286,20 +1281,6 @@ expandFullCart {
 }
 
 
-.product__item-1,
-.product__item-3,
-.product__item-5,
-.product__item-7 {
-	left: 20px;
-}
-.product__item-2 {
-	left: -20px;
-}
-.product__item-4,
-.product__item-6,
-.product__item-8 {
-	left: 4px;
-}
 
 .product__img.hover {
 	position: absolute;
@@ -1368,7 +1349,6 @@ expandFullCart {
 .product__content span {
 	position: relative;
 	left: -5px;
-	margin-right: 10px;
 	margin-right: 20px;
 }
 
@@ -1408,13 +1388,12 @@ expandFullCart {
 
 .slider-indicators {
 	top: 315px;
-	margin-left: 5px;
 }
 /*=============== BENEFITS ===============*/
 
-.benefit {
+.benefits {
 	position: relative;
-	margin-top: 110px;
+	margin-top: -320px;
 	margin-bottom: -440px;
 	z-index: 200;
 }
@@ -1682,9 +1661,8 @@ expandFullCart {
 		width: 100vw;
 	}
 	/*=============== PRODUCTS ===============*/
-
-	.products {
-		top: 80px;
+	.products{
+		margin-top:20px;
 	}
 	.product__action1,
 	.product__action2 {
@@ -1703,6 +1681,11 @@ expandFullCart {
 	}
 
 	/*=============== BENEFITS ===============*/
+
+	.benefits {
+		position: relative;
+		margin-top: -340px;
+	}
 
 	/*=============== FOOTER ===============*/
 	.footer__image {
@@ -1788,7 +1771,8 @@ expandFullCart {
 	/*=============== PRODUCTS ===============*/
 
 	.products {
-		top: 190px;
+		top: 80px;
+		z-index: 10000000;
 	}
 	.full {
 		left: 17%;
@@ -1803,8 +1787,10 @@ expandFullCart {
 	}
 
 	/*=============== BENEFITS ===============*/
-	.benefit {
-		margin-top: 100px;
+	.benefits {
+		
+		z-index: 100000000;
+		margin-top: -330px;
 	}
 
 	.benefits__ul {
